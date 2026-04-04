@@ -1,0 +1,4 @@
+baseURL = 'https://toraja-digital-gallery.netlify.app/'
+languageCode = 'id-id'
+title = 'Toraja Digital Gallery'
+theme = 'PaperMod'

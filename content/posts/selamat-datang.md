@@ -1,6 +1,12 @@
 +++
-date = '2026-04-05T03:58:43+08:00'
+
+title = 'Selamat Datang di Toraja Digital Gallery'
+
+date = '2026-04-05T23:50:00+08:00'
+
 draft = false
-title = 'Selamat Datang'
+
 +++
+
+
 

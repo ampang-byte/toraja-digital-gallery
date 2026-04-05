@@ -2,3 +2,28 @@ baseURL = 'https://toraja-digital-gallery.netlify.app/'
 languageCode = 'id-id'
 title = 'Toraja Digital Gallery'
 theme = 'PaperMod'
+# MENU UTAMA (NAVBAR)
+[[menu.main]]
+    name = "Beranda"
+    url = "/"
+    weight = 10
+
+[[menu.main]]
+    name = "Artikel"
+    url = "/categories/adat-budaya/"
+    weight = 20
+
+[[menu.main]]
+    name = "Galeri Foto"
+    url = "/categories/galeri-foto/"
+    weight = 30
+
+[[menu.main]]
+    name = "Sastra Toraja"
+    url = "/tags/rambu-solo/"
+    weight = 40
+
+[[menu.main]]
+    name = "Tentang Kami"
+    url = "/posts/selamat-datang/"
+    weight = 50

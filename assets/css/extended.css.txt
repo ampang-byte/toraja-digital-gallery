@@ -1,0 +1,37 @@
+/* WARNA TEMA ELEGAN TORAJA */
+:root {
+    /* Latar belakang seluruh halaman (Krem sangat lembut) */
+    --theme: #fdfaf5; 
+    
+    /* Warna tulisan utama (Hitam Arang agar tidak terlalu kontras/tajam) */
+    --primary: #2c3e50;
+    
+    /* Warna kartu artikel (Putih Bersih) */
+    --entry: #ffffff;
+    
+    /* Warna link/tautan (Merah Bata Khas Toraja) */
+    --tertiary: #8b0000; 
+}
+
+/* Membuat tampilan kartu artikel lebih halus */
+.main {
+    max-width: 800px; /* Agar tulisan tidak terlalu lebar ke samping, enak dibaca */
+    margin: 0 auto;
+}
+
+.post-entry {
+    border: 1px solid #eee;
+    border-radius: 12px; /* Sudut sedikit membulat agar modern */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* Bayangan sangat tipis */
+    transition: transform 0.2s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-3px); /* Efek melayang sedikit saat kursor lewat */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Mengubah warna judul saat di-klik/hover */
+h1 a:hover, h2 a:hover {
+    color: #8b0000 !important;
+}

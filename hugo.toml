@@ -15,11 +15,12 @@ theme = 'PaperMod'
     title = "Toraja Digital Gallery"
     subtitle = "Menjaga Tradisi, Melintasi Zaman. Dokumentasi digital warisan leluhur Tana Toraja."
     displaySubtitle = true
-    imageUrl = ""   # Kosongkan ini agar teks dan gambar bisa menyatu via CSS
+    imageUrl = "" 
     
     [[params.profileMode.buttons]]
         name = "📖 Jelajahi Artikel"
         url = "/categories/artikel/"
+
 # MENU NAVBAR
 [[menu.main]]
     name = "Beranda"

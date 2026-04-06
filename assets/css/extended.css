@@ -1,59 +1,76 @@
-/* 1. WADAH UTAMA */
+/* 1. WARNA TEMA */
+:root {
+    --theme: #fdfaf5;
+    --primary: #2c3e50;
+    --entry: #ffffff;
+    --tertiary: #8b0000;
+}
+
+/* 2. MEMBUAT KONTEKS POSISI */
 .profile_inner {
-    position: relative !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    margin-top: 20px !important;
-    padding: 0 !important; /* Menghilangkan padding agar teks bisa di tengah gambar */
+    position: relative !important; /* Kunci utama agar teks bisa menempel di atas gambar */
+    padding: 0 !important;
+    margin-top: 30px !important;
 }
 
-/* 2. MENGATUR GAMBAR JADI LATAR BELAKANG PENUH */
+/* 3. MENGATUR GAMBAR SEBAGAI BACKGROUND */
 .profile_inner img {
     width: 100% !important;
     max-width: 1000px !important;
-    height: 500px !important; /* Tinggi banner */
+    height: 500px !important;
     object-fit: cover !important;
     border-radius: 15px !important;
-    filter: brightness(0.6); /* Membuat gambar agak gelap agar teks putih terbaca */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* 3. PAKSA TEKS PINDAH KE TENGAH GAMBAR */
-.profile_inner h1, 
-.profile_inner .profile_description, 
-.profile_inner .buttons {
-    position: absolute !important; /* Kunci posisi di atas gambar */
-    z-index: 10 !important;
-    color: #ffffff !important;
-    text-align: center !important;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.8) !important;
+    filter: brightness(0.5) !important; /* Menggelapkan gambar agar teks putih terlihat tajam */
     margin: 0 !important;
 }
 
-/* Posisi Judul */
+/* 4. MEMAKSA TEKS PINDAH KE TENGAH GAMBAR */
+/* Kita gunakan posisi absolute untuk "mengangkat" teks ke atas gambar */
+
 .profile_inner h1 {
-    top: 35% !important;
-    font-size: 2.8rem !important;
+    position: absolute !important;
+    top: 30% !important; /* Atur tinggi teks judul */
+    color: #ffffff !important;
+    font-size: 3rem !important;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8) !important;
+    margin: 0 !important;
+    z-index: 99 !important;
 }
 
-/* Posisi Deskripsi */
 .profile_inner .profile_description {
-    top: 50% !important;
+    position: absolute !important;
+    top: 45% !important; /* Atur tinggi teks deskripsi */
+    color: #ffffff !important;
     font-size: 1.2rem !important;
-    max-width: 80% !important;
+    max-width: 700px !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.8) !important;
+    z-index: 99 !important;
+    margin: 0 !important;
 }
 
-/* Posisi Tombol */
 .profile_inner .buttons {
-    top: 65% !important;
+    position: absolute !important;
+    top: 65% !important; /* Atur tinggi tombol */
+    z-index: 99 !important;
+    margin: 0 !important;
 }
 
+/* 5. GAYA TOMBOL */
 .profile_inner .buttons .button {
     background: #8b0000 !important;
     color: white !important;
     border-radius: 8px !important;
-    padding: 10px 25px !important;
+    padding: 12px 25px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+}
+
+/* 6. NAVBAR DI ATAS */
+.header {
+    background: var(--theme);
+    margin-bottom: 20px;
 }

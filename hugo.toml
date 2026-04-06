@@ -15,13 +15,15 @@ theme = 'PaperMod'
     title = "Toraja Digital Gallery"
     subtitle = "Menjaga Tradisi, Melintasi Zaman. Dokumentasi digital warisan leluhur Tana Toraja."
     displaySubtitle = true
-    # imageUrl dikosongkan agar gambar bulat hilang
-    imageUrl = "" 
+    # PAKSA GAMBAR MUNCUL DI SINI
+    imageUrl = "header-toraja.jpg"
+    imageTitle = "Toraja Digital Gallery"
+    imageWidth = 1000  # Kita buat besar sekalian
+    imageHeight = 562
     
     [[params.profileMode.buttons]]
         name = "📖 Jelajahi Artikel"
         url = "/categories/artikel/"
-
 # MENU NAVBAR
 [[menu.main]]
     name = "Beranda"

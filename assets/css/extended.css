@@ -1,69 +1,18 @@
-/* 1. TEMA DASAR */
-:root {
-    --theme: #fdfaf5;
-    --primary: #2c3e50;
-    --entry: #ffffff;
-    --tertiary: #8b0000;
-}
-
-/* 2. SOLUSI BANNER TOTAL (MENGGUNAKAN PSEUDO-ELEMENT) */
-.profile_inner {
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    min-height: 500px !important;
+/* Menghapus bentuk bulat dan paksa gambar jadi lebar */
+.profile_inner img {
+    border-radius: 15px !important; /* Sudut halus, bukan bulat */
     width: 100% !important;
-    margin-top: 20px !important;
-    border-radius: 15px !important;
-    overflow: hidden !important; /* Memastikan gambar tidak keluar dari kotak */
-    background: #333 !important; /* Warna cadangan */
+    max-width: 900px !important;
+    height: auto !important;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
 }
 
-/* Membuat Lapisan Gambar (Ini yang akan memaksa gambar muncul) */
-.profile_inner::before {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                      url("https://toraja-digital-gallery.netlify.app/header-toraja.jpg") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    z-index: 0 !important; /* Berada di belakang teks */
-}
-
-/* 3. MEMASTIKAN TEKS DAN TOMBOL TAMPIL DI ATAS GAMBAR */
-.profile_inner h1, 
-.profile_inner .profile_description, 
-.profile_inner .buttons {
-    position: relative !important;
-    z-index: 1 !important; /* Memaksa teks naik ke atas lapisan gambar */
-    color: #ffffff !important;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.8) !important;
-}
-
-.profile_inner h1 {
-    font-size: 3rem !important;
-    margin-bottom: 15px !important;
-}
-
-.profile_inner .profile_description {
-    font-size: 1.25rem !important;
-    max-width: 650px !important;
-    line-height: 1.6 !important;
-}
-
-/* 4. TOMBOL NAVIGASI DI BANNER */
-.profile_inner .buttons .button {
-    background: #8b0000 !important;
-    color: white !important;
-    border-radius: 8px !important;
-    padding: 12px 30px !important;
-    font-weight: bold !important;
-    margin-top: 20px !important;
+.profile_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
 }

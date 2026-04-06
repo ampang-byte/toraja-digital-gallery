@@ -11,19 +11,19 @@
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    min-height: 450px !important;
+    min-height: 480px !important; /* Tinggi banner */
     width: 100% !important;
-    background-color: #333; 
-    /* JALUR GAMBAR YANG BENAR UNTUK HUGO/NETLIFY */
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://toraja-digital-gallery.netlify.app/header-toraja.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+    
+    /* INI BARIS SAKTINYA: Menggabungkan warna, gambar, posisi, dan ukuran jadi satu */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/header-toraja.jpg') no-repeat center/cover !important;
+    
     border-radius: 15px !important;
     padding: 40px !important;
     margin-top: 20px !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
-}/* TEKS DI DALAM BANNER */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+}
+
+/* TEKS DI DALAM BANNER */
 .profile_inner h1 {
     color: #ffffff !important;
     font-size: 3rem !important;

@@ -15,7 +15,7 @@
     width: 100% !important;
     background-color: #333; 
     /* JALUR GAMBAR YANG BENAR UNTUK HUGO/NETLIFY */
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/header-toraja.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/header-toraja.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;

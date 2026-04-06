@@ -1,7 +1,7 @@
-baseURL = 'https://toraja-digital-gallery.pages.dev/'
-languageCode = 'id-id'
-title = 'Toraja Digital Gallery'
-theme = 'PaperMod'
+baseURL = "https://toraja-digital-gallery.pages.dev/"
+languageCode = "id-id"
+title = "Toraja Digital Gallery"
+theme = "PaperMod"
 
 [params]
     env = "production"
@@ -9,7 +9,6 @@ theme = 'PaperMod'
     description = "Lumbung Digital Kebudayaan Toraja"
     ShowReadingTime = true
 
-# PENGATURAN HALAMAN DEPAN
 [params.profileMode]
     enabled = true
     title = "Toraja Digital Gallery"
@@ -21,7 +20,6 @@ theme = 'PaperMod'
         name = "📖 Jelajahi Artikel"
         url = "/categories/artikel/"
 
-# MENU NAVBAR
 [[menu.main]]
     name = "Beranda"
     url = "/"

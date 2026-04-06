@@ -15,11 +15,7 @@ theme = 'PaperMod'
     title = "Toraja Digital Gallery"
     subtitle = "Menjaga Tradisi, Melintasi Zaman. Dokumentasi digital warisan leluhur Tana Toraja."
     displaySubtitle = true
-    # PAKSA GAMBAR MUNCUL DI SINI
-    imageUrl = "header-toraja.jpg"
-    imageTitle = "Toraja Digital Gallery"
-    imageWidth = 1000  # Kita buat besar sekalian
-    imageHeight = 562
+    imageUrl = ""   # Kosongkan ini agar teks dan gambar bisa menyatu via CSS
     
     [[params.profileMode.buttons]]
         name = "📖 Jelajahi Artikel"

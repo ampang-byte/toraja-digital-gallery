@@ -1,18 +1,59 @@
-/* Menghapus bentuk bulat dan paksa gambar jadi lebar */
-.profile_inner img {
-    border-radius: 15px !important; /* Sudut halus, bukan bulat */
+/* 1. WADAH UTAMA */
+.profile_inner {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
     width: 100% !important;
-    max-width: 900px !important;
-    height: auto !important;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    object-fit: cover;
+    margin-top: 20px !important;
+    padding: 0 !important; /* Menghilangkan padding agar teks bisa di tengah gambar */
 }
 
-.profile_inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
+/* 2. MENGATUR GAMBAR JADI LATAR BELAKANG PENUH */
+.profile_inner img {
+    width: 100% !important;
+    max-width: 1000px !important;
+    height: 500px !important; /* Tinggi banner */
+    object-fit: cover !important;
+    border-radius: 15px !important;
+    filter: brightness(0.6); /* Membuat gambar agak gelap agar teks putih terbaca */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* 3. PAKSA TEKS PINDAH KE TENGAH GAMBAR */
+.profile_inner h1, 
+.profile_inner .profile_description, 
+.profile_inner .buttons {
+    position: absolute !important; /* Kunci posisi di atas gambar */
+    z-index: 10 !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8) !important;
+    margin: 0 !important;
+}
+
+/* Posisi Judul */
+.profile_inner h1 {
+    top: 35% !important;
+    font-size: 2.8rem !important;
+}
+
+/* Posisi Deskripsi */
+.profile_inner .profile_description {
+    top: 50% !important;
+    font-size: 1.2rem !important;
+    max-width: 80% !important;
+}
+
+/* Posisi Tombol */
+.profile_inner .buttons {
+    top: 65% !important;
+}
+
+.profile_inner .buttons .button {
+    background: #8b0000 !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 10px 25px !important;
 }

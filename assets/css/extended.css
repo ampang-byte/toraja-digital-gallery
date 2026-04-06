@@ -17,8 +17,6 @@
    GLOBAL STYLE
 ========================= */
 body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text);
     background: red !important;
 }
 

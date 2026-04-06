@@ -18,34 +18,27 @@
     border-radius: 16px !important;
     text-align: center !important;
     
-    /* PERBAIKAN ALAMAT GAMBAR: Menambahkan /img/ */
+    /* MENGGUNAKAN ALAMAT ABSOLUT (PASTI BERHASIL) */
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url("../img/header-toraja.jpg") no-repeat center center / cover !important;
+                url("https://toraja-digital-gallery.pages.dev/img/header-toraja.jpg") no-repeat center center / cover !important;
     
     box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
 }
 
-/* PENGATURAN TEKS DI TENGAH GAMBAR */
-.profile_inner {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    min-height: 500px !important;
-    width: 100% !important;
-    margin-top: 30px !important;
-    padding: 40px !important;
-    border-radius: 16px !important;
-    text-align: center !important;
-    /* Alamat gambar dimulai dengan /img/ karena file ada di static/img/ */
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url("/img/header-toraja.jpg") no-repeat center center / cover !important;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+/* PENGATURAN TEKS */
+.profile_inner h1 {
+    color: #ffffff !important;
+    font-size: 3.2rem !important;
+    margin-bottom: 15px !important;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.9) !important;
 }
 
-.profile_inner h1 { color: #ffffff !important; font-size: 3.2rem !important; text-shadow: 2px 2px 12px rgba(0,0,0,0.9) !important; }
-.profile_inner .profile_description { color: #ffffff !important; font-size: 1.3rem !important; text-shadow: 1px 1px 8px rgba(0,0,0,0.9) !important; }
-.profile_inner .buttons .button { background: #8b0000 !important; color: white !important; border-radius: 8px !important; padding: 12px 30px !important; margin-top: 25px !important; display: inline-block !important;
+.profile_inner .profile_description {
+    color: #ffffff !important;
+    font-size: 1.3rem !important;
+    max-width: 700px !important;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.9) !important;
+    line-height: 1.6 !important;
 }
 
 /* TOMBOL */
@@ -56,9 +49,6 @@
     padding: 12px 30px !important;
     font-weight: bold !important;
     margin-top: 25px !important;
-    transition: transform 0.2s ease !important;
-}
-
-.profile_inner .buttons .button:hover {
-    transform: scale(1.05) !important;
+    display: inline-block !important;
+    text-decoration: none !important;
 }

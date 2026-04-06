@@ -2,7 +2,44 @@ baseURL = 'https://toraja-digital-gallery.netlify.app/'
 languageCode = 'id-id'
 title = 'Toraja Digital Gallery'
 theme = 'PaperMod'
-# MENU UTAMA (NAVBAR)
+
+# PENGATURAN UMUM
+[params]
+    env = "production"
+    title = "Toraja Digital Gallery"
+    description = "Lumbung Digital Kebudayaan Toraja: Dokumentasi Adat, Tradisi, dan Galeri Foto Tempo Dulu."
+    author = "Toraja Digital Gallery Team"
+    
+    # Fitur Tambahan
+    ShowReadingTime = true
+    ShowShareButtons = true
+    ShowPostNavLinks = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    
+    # Pengaturan Gambar
+    assets = { disableHLJS = true }
+
+# PENGATURAN HALAMAN DEPAN (PROFILE MODE)
+[params.profileMode]
+    enabled = true
+    title = "Toraja Digital Gallery"
+    subtitle = "Menjaga Tradisi, Melintasi Zaman. Dokumentasi digital warisan leluhur Tana Toraja."
+    displaySubtitle = true
+    imageUrl = "header-toraja.jpg"
+    imageTitle = "Tongkonan Toraja"
+    imageWidth = 600    # Ukuran gambar header
+    imageHeight = 338   # Mengikuti rasio 16:9 (1080px)
+    
+    [[params.profileMode.buttons]]
+        name = "📖 Jelajahi Artikel"
+        url = "/categories/artikel/"
+    
+    [[params.profileMode.buttons]]
+        name = "📷 Galeri Foto"
+        url = "/categories/galeri-foto/"
+
+# MENU NAVIGASI (NAVBAR)
 [[menu.main]]
     name = "Beranda"
     url = "/"
@@ -10,7 +47,7 @@ theme = 'PaperMod'
 
 [[menu.main]]
     name = "Artikel"
-    url = "/categories/adat-budaya/"
+    url = "/categories/artikel/"
     weight = 20
 
 [[menu.main]]
@@ -20,10 +57,16 @@ theme = 'PaperMod'
 
 [[menu.main]]
     name = "Sastra Toraja"
-    url = "/tags/rambu-solo/"
+    url = "/tags/sastra/"
     weight = 40
 
 [[menu.main]]
     name = "Tentang Kami"
     url = "/posts/selamat-datang/"
     weight = 50
+
+# PENGATURAN TAXONOMY (KATEGORI & TAG)
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    series = "series"

@@ -1,3 +1,4 @@
+/* 1. WARNA DASAR */
 :root {
     --theme: #fdfaf5;
     --primary: #2c3e50;
@@ -5,43 +6,53 @@
     --tertiary: #8b0000;
 }
 
-/* MEMBUAT HERO BANNER */
+/* 2. PAKSA BANNER MUNCUL (KODE NUKLIR) */
 .profile_inner {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    min-height: 480px !important; /* Tinggi banner */
+    min-height: 480px !important;
     width: 100% !important;
-    
-    /* INI BARIS SAKTINYA: Menggabungkan warna, gambar, posisi, dan ukuran jadi satu */
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/header-toraja.jpg') no-repeat center/cover !important;
-    
-    border-radius: 15px !important;
-    padding: 40px !important;
+    max-width: 100% !important;
     margin-top: 20px !important;
+    border-radius: 15px !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+
+    /* Kita pakai alamat lengkap agar tidak ada lagi masalah jalur folder */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                      url("https://toraja-digital-gallery.netlify.app/header-toraja.jpg") !important;
+    
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
-/* TEKS DI DALAM BANNER */
+/* 3. TEKS DI DALAM BANNER */
 .profile_inner h1 {
     color: #ffffff !important;
     font-size: 3rem !important;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7) !important;
 }
 
 .profile_inner .profile_description {
     color: #ffffff !important;
-    font-size: 1.2rem;
-    max-width: 600px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    font-size: 1.2rem !important;
+    max-width: 700px !important;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7) !important;
 }
 
-/* TOMBOL DI BANNER */
+/* 4. TOMBOL */
 .profile_inner .buttons .button {
     background: #8b0000 !important;
     color: white !important;
-    border-radius: 8px;
-    padding: 10px 25px;
-    font-weight: bold;
+    border-radius: 8px !important;
+    padding: 10px 25px !important;
+    font-weight: bold !important;
+    transition: 0.3s !important;
+}
+
+.profile_inner .buttons .button:hover {
+    background: #600000 !important;
+    transform: scale(1.05) !important;
 }

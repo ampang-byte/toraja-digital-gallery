@@ -1,56 +1,67 @@
-/* WARNA TEMA ELEGAN TORAJA */
+/* WARNA DASAR */
 :root {
-    /* Latar belakang seluruh halaman (Krem sangat lembut) */
-    --theme: #fdfaf5; 
-    
-    /* Warna tulisan utama (Hitam Arang agar tidak terlalu kontras/tajam) */
+    --theme: #fdfaf5;
     --primary: #2c3e50;
-    
-    /* Warna kartu artikel (Putih Bersih) */
     --entry: #ffffff;
-    
-    /* Warna link/tautan (Merah Bata Khas Toraja) */
-    --tertiary: #8b0000; 
+    --tertiary: #8b0000;
 }
 
-/* Membuat tampilan kartu artikel lebih halus */
-.main {
-    max-width: 800px; /* Agar tulisan tidak terlalu lebar ke samping, enak dibaca */
-    margin: 0 auto;
-}
+/* --- TRIK BANNER PENUH (HERO IMAGE) --- */
 
-.post-entry {
-    border: 1px solid #eee;
-    border-radius: 12px; /* Sudut sedikit membulat agar modern */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* Bayangan sangat tipis */
-    transition: transform 0.2s ease;
-}
-
-.post-entry:hover {
-    transform: translateY(-3px); /* Efek melayang sedikit saat kursor lewat */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
-
-/* Mengubah warna judul saat di-klik/hover */
-h1 a:hover, h2 a:hover {
-    color: #8b0000 !important;
-}
-
-/* PENGATURAN GAMBAR HEADER (BANER DEPAN) */
-.profile_inner img {
-    border-radius: 12px !important;
-    width: 100% !important;
-    height: auto !important;
-    max-width: 800px; /* Menyesuaikan lebar konten agar sejajar */
-    margin-bottom: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Efek bayangan agar gambar terlihat "timbul" */
-    object-fit: cover;
-}
-
-/* Memastikan teks profil berada di tengah di bawah gambar */
+/* 1. Membuat Wadah Header Menjadi Background Gambar */
 .profile_inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    min-height: 500px; /* Tinggi Banner */
+    width: 100%;
+    margin: 0;
+    padding: 40px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/header-toraja.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    color: #ffffff !important; /* Tulisan di dalam banner jadi putih */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* 2. Menyembunyikan Gambar Bulat Bawaan (Karena sudah jadi background) */
+.profile_inner img {
+    display: none;
+}
+
+/* 3. Membuat Teks di Tengah Banner Jadi Putih & Jelas */
+.profile_inner .profile_description, .profile_inner h1 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* Bayangan teks agar terbaca */
+}
+
+.profile_inner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* 4. Navbar Harus Tetap di Atas (Gaya Transparan) */
+.header {
+    background: transparent;
+    position: relative;
+    z-index: 100;
+}
+
+/* Agar Menu Navigasi tetap mudah dibaca */
+.menu a {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Tombol di dalam Banner */
+.profile_inner .buttons .button {
+    background: #8b0000;
+    color: white !important;
+    border: none;
+}
+
+.profile_inner .buttons .button:hover {
+    background: #600000;
 }

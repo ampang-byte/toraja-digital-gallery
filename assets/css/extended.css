@@ -13,16 +13,17 @@
     justify-content: center !important;
     min-height: 450px !important;
     width: 100% !important;
-    background-color: #333; /* Warna cadangan jika gambar gagal muat */
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../header-toraja.jpg") !important;
+    background-color: #333; 
+    /* JALUR GAMBAR YANG BENAR UNTUK HUGO/NETLIFY */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/header-toraja.jpg") !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     border-radius: 15px !important;
     padding: 40px !important;
     margin-top: 20px !important;
-}
-/* TEKS DI DALAM BANNER */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}/* TEKS DI DALAM BANNER */
 .profile_inner h1 {
     color: #ffffff !important;
     font-size: 3rem !important;

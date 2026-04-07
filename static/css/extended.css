@@ -1,147 +1,56 @@
 /* =========================
-   HEADER FIX (SEJAJAR)
+   HEADER RAPI (TANPA MERUSAK)
 ========================= */
 .header {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 15px 20px;
 }
 
-/* LOGO */
-.logo {
-    flex: 1;
-}
-
-.logo a {
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-
-/* MENU */
+/* MENU HORIZONTAL NORMAL */
 #menu {
-    display: flex !important;
-    justify-content: flex-end;
-    gap: 25px;
-    flex: 2;
-}
-
-#menu li {
-    list-style: none;
-}
-
-#menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-#menu a:hover {
-    color: #8b0000;
+    display: flex;
+    gap: 20px;
 }
 
 /* =========================
-   HERO FULL WIDTH
+   HERO (TETAP STRUKTUR ASLI)
 ========================= */
 .profile {
-    width: 100%;
-    margin: 0;
+    max-width: 1100px;
+    margin: 40px auto;
 }
 
-/* HERO */
+/* HERO IMAGE */
 .profile_inner {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    min-height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
 
-    background: url("/img/header-toraja.jpg") center/cover no-repeat;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* OVERLAY GELAP */
-.profile_inner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.65);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("/img/header-toraja.jpg") center/cover no-repeat;
 }
 
 /* =========================
-   TEXT HERO (PAKSA PUTIH)
+   TEXT HERO (PERBAIKAN SAJA)
 ========================= */
 .profile_inner h1 {
-    position: relative;
-    z-index: 2;
     color: #ffffff !important;
-    font-size: 3rem;
-    text-align: center;
 }
 
 .profile_inner .profile_description {
-    position: relative;
-    z-index: 2;
-    color: #ffffff !important;
-    font-size: 1.2rem;
-    max-width: 700px;
-    text-align: center;
+    color: #f0f0f0 !important;
 }
 
 /* =========================
-   SEMBUNYIKAN BUTTON DI HERO
+   BUTTON (TETAP DI TEMPAT ASLI)
 ========================= */
 .profile_inner .buttons {
-    display: none !important;
+    margin-top: 20px;
 }
 
 /* =========================
-   BUTTON BARU DI LUAR HERO
-========================= */
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: -20px;
-    margin-bottom: 40px;
-}
-
-/* BUTTON STYLE */
-.hero-buttons a {
-    background: #8b0000;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.hero-buttons a:hover {
-    background: #a30000;
-}
-
-/* =========================
-   FOOTER CENTER (AMAN)
+   FOOTER CENTER
 ========================= */
 .footer {
-    text-align: center !important;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-    #menu {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .profile_inner h1 {
-        font-size: 2rem;
-    }
+    text-align: center;
 }

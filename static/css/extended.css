@@ -1,35 +1,31 @@
 /* =========================
-   GLOBAL CONTAINER
-========================= */
-.main, main {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* =========================
-   HEADER (SEJAJAR FIX)
+   HEADER FIX (SEJAJAR)
 ========================= */
 .header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px 20px;
-
-    display: flex !important;
-    justify-content: space-between;
-    align-items: center;
 }
 
 /* LOGO */
-.logo a {
-    font-size: 1.4rem;
-    font-weight: bold;
+.logo {
+    flex: 1;
 }
 
-/* MENU HORIZONTAL */
+.logo a {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* MENU */
 #menu {
     display: flex !important;
-    flex-direction: row !important;
+    justify-content: flex-end;
     gap: 25px;
+    flex: 2;
 }
 
 #menu li {
@@ -38,8 +34,8 @@
 
 #menu a {
     text-decoration: none;
-    font-weight: 500;
     color: #333;
+    font-weight: 500;
 }
 
 #menu a:hover {
@@ -47,7 +43,7 @@
 }
 
 /* =========================
-   HERO FULL WIDTH (1920 STYLE)
+   HERO FULL WIDTH
 ========================= */
 .profile {
     width: 100%;
@@ -58,11 +54,8 @@
 .profile_inner {
     position: relative;
     width: 100%;
-    height: 70vh; /* responsive */
+    height: 70vh;
     min-height: 450px;
-
-    border-radius: 0;
-    overflow: hidden;
 
     background: url("/img/header-toraja.jpg") center/cover no-repeat;
 
@@ -72,92 +65,83 @@
     align-items: center;
 }
 
-/* OVERLAY */
+/* OVERLAY GELAP */
 .profile_inner::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.65);
 }
 
 /* =========================
-   TEXT HERO (JELAS & CENTER)
+   TEXT HERO (PAKSA PUTIH)
 ========================= */
-.profile_inner h1,
-.profile_inner .profile_description {
+.profile_inner h1 {
     position: relative;
     z-index: 2;
+    color: #ffffff !important;
+    font-size: 3rem;
     text-align: center;
 }
 
-/* JUDUL */
-.profile_inner h1 {
-    color: #ffffff !important;
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-/* SUBTITLE */
 .profile_inner .profile_description {
-    color: #f5f5f5 !important;
+    position: relative;
+    z-index: 2;
+    color: #ffffff !important;
     font-size: 1.2rem;
     max-width: 700px;
+    text-align: center;
 }
 
 /* =========================
-   BUTTON DI LUAR HERO
+   SEMBUNYIKAN BUTTON DI HERO
 ========================= */
 .profile_inner .buttons {
-    position: absolute;
-    bottom: -30px;
+    display: none !important;
+}
+
+/* =========================
+   BUTTON BARU DI LUAR HERO
+========================= */
+.hero-buttons {
     display: flex;
+    justify-content: center;
     gap: 15px;
+    margin-top: -20px;
+    margin-bottom: 40px;
 }
 
 /* BUTTON STYLE */
-.profile_inner .button {
-    background: #8b0000 !important;
-    color: white !important;
-    border-radius: 50px;
+.hero-buttons a {
+    background: #8b0000;
+    color: white;
     padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
     font-weight: 500;
 }
 
-.profile_inner .button:hover {
-    background: #a30000 !important;
+.hero-buttons a:hover {
+    background: #a30000;
 }
 
 /* =========================
-   SPACING SETELAH HERO
-========================= */
-.profile {
-    margin-bottom: 60px;
-}
-
-/* =========================
-   FOOTER CENTER FIX
+   FOOTER CENTER (AMAN)
 ========================= */
 .footer {
     text-align: center !important;
-    width: 100%;
-    margin-top: 40px;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
-
-    .profile_inner {
-        height: 50vh;
+    #menu {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .profile_inner h1 {
         font-size: 2rem;
-    }
-
-    #menu {
-        flex-wrap: wrap;
-        justify-content: center;
     }
 }

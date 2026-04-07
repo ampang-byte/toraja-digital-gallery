@@ -1,51 +1,61 @@
 /* =========================
-   HEADER RAPI (TANPA MERUSAK)
+   RESET LIST MENU (HILANGKAN TITIK)
+========================= */
+#menu {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+/* =========================
+   HEADER RAPI
 ========================= */
 .header {
     max-width: 1100px;
     margin: 0 auto;
     padding: 15px 20px;
-}
 
-/* MENU HORIZONTAL NORMAL */
-#menu {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* =========================
-   HERO (TETAP STRUKTUR ASLI)
+   HERO PERBAIKAN
 ========================= */
 .profile {
     max-width: 1100px;
     margin: 40px auto;
 }
 
-/* HERO IMAGE */
+/* HERO BOX */
 .profile_inner {
+    min-height: 500px; /* lebih tinggi */
     border-radius: 16px;
-    overflow: hidden;
 
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url("/img/header-toraja.jpg") center/cover no-repeat;
 }
 
 /* =========================
-   TEXT HERO (PERBAIKAN SAJA)
+   TEXT HERO FIX
 ========================= */
 .profile_inner h1 {
     color: #ffffff !important;
 }
 
+/* PENTING: PAKSA PUTIH */
 .profile_inner .profile_description {
-    color: #f0f0f0 !important;
+    color: #ffffff !important;
 }
 
 /* =========================
-   BUTTON (TETAP DI TEMPAT ASLI)
+   BUTTON AGAK KELUAR
 ========================= */
 .profile_inner .buttons {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 /* =========================
@@ -53,4 +63,11 @@
 ========================= */
 .footer {
     text-align: center;
+}
+
+/* =========================
+   HAPUS ELEMENT ANEH (BIRU)
+========================= */
+svg {
+    display: none !important;
 }

@@ -1,62 +1,55 @@
 /* =========================
-   RESET DASAR
+   GLOBAL CENTER FIX
 ========================= */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* =========================
    HEADER / NAVBAR FIX
 ========================= */
 .header {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 15px 40px !important;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
 }
 
-/* FIX MENU JADI HORIZONTAL */
+/* MENU RAPI */
 #menu {
     display: flex !important;
-    flex-direction: row !important;
-    gap: 25px !important;
-}
-
-#menu li {
-    list-style: none !important;
-}
-
-#menu a {
-    text-decoration: none !important;
-    font-weight: 500;
-    color: #333;
-}
-
-#menu a:hover {
-    color: #8b0000;
+    justify-content: center;
+    gap: 30px;
 }
 
 /* =========================
-   HERO FIX TOTAL
+   HERO WRAPPER (PENTING)
 ========================= */
 .profile {
-    display: flex !important;
-    justify-content: center !important;
+    display: flex;
+    justify-content: center;
 }
 
-/* CONTAINER HERO */
+/* =========================
+   HERO BOX (SIMETRIS)
+========================= */
 .profile_inner {
-    position: relative !important;
+    position: relative;
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px;   /* bikin balance */
     height: 420px;
 
-    margin: 60px auto !important;
+    margin: 40px auto 60px auto;
     border-radius: 20px;
     overflow: hidden;
 
-    background: url("/img/header-toraja.jpg") center/cover no-repeat !important;
+    background: url("/img/header-toraja.jpg") center/cover no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* OVERLAY */
@@ -67,36 +60,78 @@ body {
     background: rgba(0,0,0,0.55);
 }
 
-/* TEXT CONTAINER */
-.profile_inner > div {
+/* =========================
+   TEXT CENTER FIX
+========================= */
+.profile_inner h1,
+.profile_inner .profile_description {
     position: relative;
     z-index: 2;
-}
-
-/* TENGAHKAN SEMUA */
-.profile_inner {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
-/* JUDUL */
 .profile_inner h1 {
-    color: #fff !important;
-    font-size: 2.5rem !important;
-    margin-bottom: 10px !important;
+    color: #fff;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
 }
 
-/* SUBTITLE */
 .profile_inner .profile_description {
-    color: #eee !important;
+    color: #eee;
     max-width: 600px;
-    font-size: 1rem;
 }
 
 /* =========================
-   BUTTON PINDAH KE LUAR HERO
+   BUTTON FIX (SIMETRIS)
 ========================= */
-.profil
+.profile_inner .buttons {
+    position: absolute;
+    bottom: -25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* BUTTON */
+.profile_inner .button {
+    background: #8b0000;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 22px;
+}
+
+/* =========================
+   SPACING BAWAH
+========================= */
+.profile {
+    margin-bottom: 50px;
+}
+
+/* =========================
+   CARD FIX
+========================= */
+.post-entry {
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.post-entry:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .profile_inner {
+        height: 300px;
+    }
+
+    .profile_inner h1 {
+        font-size: 1.8rem;
+    }
+
+    #menu {
+        flex-wrap: wrap;
+    }
+}

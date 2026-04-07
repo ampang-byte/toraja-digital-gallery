@@ -1,42 +1,5 @@
 {{ define "main" }}
-
-<!-- HERO (pakai bawaan PaperMod) -->
-{{ partial "profile.html" . }}
-
-<!-- INTRO -->
-<section class="section intro">
-  <h2>Warisan Budaya Tana Toraja</h2>
-  <p>
-    Menjelajahi nilai, tradisi, dan keindahan budaya Toraja melalui dokumentasi digital yang autentik.
-  </p>
-</section>
-
-<!-- ARTIKEL TERBARU -->
-<section class="section">
-  <h2>Artikel Terbaru</h2>
-  <div class="grid">
-    {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
-    <a href="{{ .RelPermalink }}" class="card">
-      <h3>{{ .Title }}</h3>
-      <p>{{ .Summary }}</p>
-    </a>
-    {{ end }}
-  </div>
-</section>
-
-<!-- GALERI -->
-<section class="section">
-  <h2>Galeri Budaya</h2>
-  <p>Lihat dokumentasi visual budaya Toraja.</p>
-  <a href="/categories/galeri-foto/" class="btn">Lihat Galeri</a>
-</section>
-
-<!-- TENTANG -->
-<section class="section about">
-  <h2>Tentang Toraja Digital Gallery</h2>
-  <p>
-    Platform ini didedikasikan untuk melestarikan budaya Toraja melalui tulisan, foto, dan dokumentasi digital.
-  </p>
-</section>
-
+<div style="text-align:center; margin-top:100px;">
+    <h1>TEST BERHASIL</h1>
+</div>
 {{ end }}

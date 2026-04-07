@@ -1,171 +1,102 @@
 /* =========================
-   FONT
-========================= */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap');
-
-/* =========================
-   GLOBAL
+   RESET DASAR
 ========================= */
 body {
     font-family: 'Poppins', sans-serif;
-}
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+    margin: 0;
 }
 
 /* =========================
-   NAVBAR PROFESIONAL
+   HEADER / NAVBAR FIX
 ========================= */
 .header {
     display: flex !important;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.9);
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 40px !important;
 }
 
-.dark .header {
-    background: rgba(0,0,0,0.7);
-}
-
-/* MENU JADI HORIZONTAL */
-.menu {
+/* FIX MENU JADI HORIZONTAL */
+#menu {
     display: flex !important;
-    gap: 25px;
+    flex-direction: row !important;
+    gap: 25px !important;
 }
 
-.menu li {
-    list-style: none;
+#menu li {
+    list-style: none !important;
 }
 
-.menu a {
-    text-decoration: none;
+#menu a {
+    text-decoration: none !important;
     font-weight: 500;
     color: #333;
-    transition: 0.3s;
 }
 
-.menu a:hover {
+#menu a:hover {
     color: #8b0000;
 }
 
 /* =========================
-   HERO IMAGE
+   HERO FIX TOTAL
 ========================= */
+.profile {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* CONTAINER HERO */
 .profile_inner {
-    position: relative;
+    position: relative !important;
+    width: 100%;
     max-width: 1000px;
     height: 420px;
-    margin: 50px auto 20px auto;
+
+    margin: 60px auto !important;
     border-radius: 20px;
     overflow: hidden;
 
-    background-image: url("/img/header-toraja.jpg");
-    background-size: cover;
-    background-position: center;
-
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    background: url("/img/header-toraja.jpg") center/cover no-repeat !important;
 }
 
-/* OVERLAY GELAP */
-.profile_inner::before {
+/* OVERLAY */
+.profile_inner::after {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.55);
 }
 
-/* =========================
-   TEXT DI TENGAH GAMBAR
-========================= */
-.profile_inner h1,
-.profile_inner .profile_description {
+/* TEXT CONTAINER */
+.profile_inner > div {
     position: relative;
     z-index: 2;
-    text-align: center;
 }
 
+/* TENGAHKAN SEMUA */
 .profile_inner {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /* JUDUL */
 .profile_inner h1 {
-    color: #ffffff;
-    font-size: 2.8rem;
-    margin-bottom: 10px;
+    color: #fff !important;
+    font-size: 2.5rem !important;
+    margin-bottom: 10px !important;
 }
 
 /* SUBTITLE */
 .profile_inner .profile_description {
-    color: #f1f1f1;
-    font-size: 1.1rem;
+    color: #eee !important;
     max-width: 600px;
-    line-height: 1.6;
+    font-size: 1rem;
 }
 
 /* =========================
-   BUTTON PINDAH KE BAWAH
+   BUTTON PINDAH KE LUAR HERO
 ========================= */
-.profile_inner .buttons {
-    position: absolute;
-    bottom: -25px;
-    display: flex;
-    gap: 15px;
-}
-
-/* STYLE BUTTON */
-.profile_inner .buttons .button {
-    background: #8b0000;
-    color: white;
-    border-radius: 50px;
-    padding: 10px 22px;
-    font-size: 0.95rem;
-    transition: 0.3s;
-}
-
-.profile_inner .buttons .button:hover {
-    background: #a30000;
-    transform: translateY(-2px);
-}
-
-/* =========================
-   CARD ARTIKEL
-========================= */
-.post-entry {
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.post-entry:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* =========================
-   RESPONSIVE (HP)
-========================= */
-@media (max-width: 768px) {
-    .profile_inner {
-        height: 300px;
-    }
-
-    .profile_inner h1 {
-        font-size: 2rem;
-    }
-
-    .profile_inner .profile_description {
-        font-size: 0.9rem;
-        padding: 0 15px;
-    }
-
-    .menu {
-        gap: 15px;
-        font-size: 0.9rem;
-    }
-}
+.profil

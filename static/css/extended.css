@@ -161,3 +161,45 @@
         justify-content: center;
     }
 }
+
+/* PAKSA HEADER SATU GARIS */
+.header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+/* LOGO KIRI */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* MENU KANAN */
+#menu {
+    display: flex !important;
+    align-items: center;
+    gap: 25px;
+}
+
+/* PAKSA SEMUA TEKS DI HERO JADI PUTIH */
+.profile_inner * {
+    color: #ffffff !important;
+}
+
+/* KELUARKAN TOMBOL DARI HERO */
+.profile_inner .buttons {
+    position: relative !important;
+    bottom: -40px !important;
+    justify-content: center !important;
+}
+
+/* BUNGKUS SUPAYA CENTER */
+.profile_inner .buttons {
+    width: 100%;
+    display: flex;
+}
+
+.profile {
+    margin-bottom: 80px !important;
+}

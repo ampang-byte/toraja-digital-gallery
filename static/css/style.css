@@ -3,15 +3,12 @@
     --putih: #ffffff;
     --merah: #7a0c0c;
     --kuning: #d4af37;
-    --abu: #f5f5f5;
 }
 
 /* RESET */
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: var(--putih);
-    color: var(--hitam);
 }
 
 /* CONTAINER */
@@ -36,27 +33,16 @@ body {
 
 .logo {
     font-weight: bold;
-    font-size: 1.2rem;
 }
 
 .nav a {
     color: var(--putih);
     margin-left: 25px;
     text-decoration: none;
-    position: relative;
 }
 
-.nav a::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background: var(--kuning);
-    width: 0;
-    transition: 0.3s;
-}
-
-.nav a:hover::after {
-    width: 100%;
+.nav a:hover {
+    color: var(--kuning);
 }
 
 /* HERO */
@@ -72,42 +58,30 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.8));
+    background: rgba(0,0,0,0.7);
 }
 
 .hero-content {
     position: relative;
     text-align: center;
     color: var(--putih);
-    max-width: 700px;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    letter-spacing: 1px;
+    font-size: 3rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    color: #ddd;
+    margin: 10px 0 20px;
 }
 
 /* BUTTON */
 .btn {
     padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    margin: 5px;
-    display: inline-block;
-}
-
-.btn {
     background: var(--merah);
     color: var(--putih);
-}
-
-.btn:hover {
-    background: #5c0808;
+    border-radius: 50px;
+    text-decoration: none;
 }
 
 .btn-outline {
@@ -121,43 +95,24 @@ body {
     text-align: center;
 }
 
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
 /* CARD */
 .card {
-    background: var(--putih);
+    background: #fff;
     border-radius: 12px;
-    overflow: hidden;
     border: 1px solid #eee;
-    transition: 0.3s;
+    text-decoration: none;
+    color: inherit;
 }
 
 .card-content {
     padding: 20px;
-}
-
-.card h3 {
-    color: var(--hitam);
-}
-
-.card p {
-    color: #555;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
 /* GALERI */
@@ -169,39 +124,13 @@ body {
 
 .gallery img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
     border-radius: 10px;
-    transition: 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
 }
 
 /* FOOTER */
 .footer {
+    text-align: center;
+    padding: 30px;
     background: var(--hitam);
     color: var(--putih);
-    padding: 30px;
-    text-align: center;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .nav a {
-        margin: 10px;
-    }
 }

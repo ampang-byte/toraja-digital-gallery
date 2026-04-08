@@ -1,5 +1,45 @@
 {{ define "main" }}
 
-<h1 style="color:red;">TEST BERHASIL TOTAL</h1>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Toraja Digital Gallery</h1>
+        <p>Menjaga Tradisi, Melintasi Zaman</p>
+
+        <div class="hero-btns">
+            <a href="/posts/" class="btn">Jelajahi Artikel</a>
+            <a href="#" class="btn btn-outline">Lihat Galeri</a>
+        </div>
+    </div>
+</section>
+
+<!-- ARTIKEL -->
+<section class="section">
+    <h2>Artikel Terbaru</h2>
+
+    <div class="grid">
+        {{ range first 3 .Site.RegularPages }}
+        <a href="{{ .RelPermalink }}" class="card">
+            <div class="card-content">
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Summary }}</p>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+</section>
+
+<!-- GALERI -->
+<section class="section">
+    <h2>Galeri Budaya Toraja</h2>
+
+    <div class="gallery">
+        <img src="/img/header-toraja.jpg">
+        <img src="/img/header-toraja.jpg">
+        <img src="/img/header-toraja.jpg">
+    </div>
+</section>
 
 {{ end }}

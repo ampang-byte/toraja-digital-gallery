@@ -1,7 +1,6 @@
 baseURL = "https://toraja-digital-gallery.pages.dev/"
 languageCode = "id-id"
 title = "Toraja Digital Gallery"
-theme = "PaperMod"
 
 [params]
     ShowReadingTime = true

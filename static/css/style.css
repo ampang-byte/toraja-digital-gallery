@@ -48,31 +48,15 @@ body {
 /* HERO */
 .hero {
     position: relative;
-    height: 90vh;
+
+    width: 100%;
+    aspect-ratio: 16 / 9; /* kunci 1920x1080 */
+
     background: url("/img/header-toraja.jpg") center/cover no-repeat;
+
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-}
-
-.hero-content {
-    position: relative;
-    text-align: center;
-    color: var(--putih);
-}
-
-.hero h1 {
-    font-size: 3rem;
-}
-
-.hero p {
-    margin: 10px 0 20px;
 }
 
 /* BUTTON */

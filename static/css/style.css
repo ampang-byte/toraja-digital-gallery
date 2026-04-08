@@ -59,6 +59,35 @@ body {
     justify-content: center;
 }
 
+/* ISI HERO (TEXT CENTER FIX) */
+.hero-content {
+    position: relative;
+    color: var(--putih);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    gap: 10px;
+}
+
+/* JUDUL */
+.hero h1 {
+    margin: 0;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+/* SUBTITLE */
+.hero p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
 /* BUTTON */
 .btn {
     padding: 12px 25px;

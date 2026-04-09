@@ -164,12 +164,15 @@ body {
 /* MOBILE FIX HERO SIZE */
 @media (max-width: 768px) {
     .hero {
-        height: 55vh; /* sedikit lebih lega */
-        padding: 20px; /* biar teks tidak mepet */
+        height: 55vh;
+        padding: 20px;
+
+        background-size: cover;
+        background-position: center;
     }
 
     .hero h1 {
-        font-size: 2rem; /* lebih proporsional di HP */
+        font-size: 2rem;
     }
 
     .hero p {

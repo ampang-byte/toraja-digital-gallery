@@ -87,14 +87,31 @@ body {
     margin: 0;
     font-size: 3rem;
     line-height: 1.2;
+
+    color: #ffffff;
+
+    /* STROKE */
+    -webkit-text-stroke: 1px #000;
+
+    /* fallback shadow */
+    text-shadow:
+        2px 2px 4px rgba(0,0,0,0.7),
+        -2px -2px 4px rgba(0,0,0,0.7);
 }
 
-/* SUBTITLE */
+/* SUBTITLE HERO */
 .hero p {
     margin: 0;
     font-size: 1.2rem;
     line-height: 1.5;
-    color: #ddd;
+
+    color: #ffffff;
+
+    /* STROKE HALUS */
+    -webkit-text-stroke: 0.5px #000;
+
+    /* SHADOW BIAR TERBACA */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 /* BUTTON */

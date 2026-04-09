@@ -51,7 +51,7 @@ body {
 
     width: 100%;
 
-    background: url("/img/header-toraja.jpg") center/cover no-repeat;
+    background: url("/img/header-toraja.jpg") center top / cover no-repeat;
 
     display: flex;
     align-items: center;

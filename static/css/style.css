@@ -164,15 +164,12 @@ body {
 /* MOBILE FIX HERO SIZE */
 @media (max-width: 768px) {
 .hero {
-    height: 50vh; /* lebih pendek biar tidak zoom */
+    height: 55vh;
 
     padding: 0;
 
-    background-size: cover; /* WAJIB balik ke cover */
-
-    background-position: center center; /* fokus tengah */
-
-    background-repeat: no-repeat;
+    /* INI KUNCI: PAKAI GAMBAR MOBILE */
+    background: url("/img/header-toraja-mobile.jpg") center / cover no-repeat;
 }
 
     .hero h1 {

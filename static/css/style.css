@@ -176,7 +176,7 @@ body {
     background-repeat: no-repeat;
 
     /* WARNA BACKUP */
-    background-color: #000;
+    background-color: var(--hitam);
 }
 
     .hero h1 {

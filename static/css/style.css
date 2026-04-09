@@ -61,10 +61,17 @@ body {
 }
 
 /* KHUSUS HP */
+/* MOBILE FIX: HERO TEXT */
 @media (max-width: 768px) {
-    .hero {
-        aspect-ratio: 16 / 9; /* HP tetap proporsional */
-        height: auto;
+
+    .hero h1 {
+        -webkit-text-stroke: 0; /* MATIKAN outline */
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    }
+
+    .hero p {
+        -webkit-text-stroke: 0; /* MATIKAN outline */
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
     }
 }
 

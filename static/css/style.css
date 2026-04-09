@@ -62,7 +62,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* default desktop */
     top: 0;
     left: 0;
 }
@@ -179,6 +179,8 @@ body {
 
     .mobile {
         display: block;
+        object-fit: contain; /* FIX ZOOM */
+        background-color: var(--hitam);
     }
 
     .hero {

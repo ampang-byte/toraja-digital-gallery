@@ -164,19 +164,15 @@ body {
 /* MOBILE FIX HERO SIZE */
 @media (max-width: 768px) {
 .hero {
-    height: 55vh;
+    height: 50vh; /* lebih pendek biar tidak zoom */
+
     padding: 0;
 
-    /* UBAH INI (KUNCI) */
-    background-size: contain;
+    background-size: cover; /* WAJIB balik ke cover */
 
-    /* POSISI TENGAH ATAS */
-    background-position: center top;
+    background-position: center center; /* fokus tengah */
 
     background-repeat: no-repeat;
-
-    /* WARNA BACKUP */
-    background-color: var(--hitam);
 }
 
     .hero h1 {

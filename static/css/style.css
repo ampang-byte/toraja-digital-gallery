@@ -48,22 +48,36 @@ body {
 /* HERO */
 .hero {
     position: relative;
-
     width: 100%;
-
-    background: url("/img/header-toraja.jpg") center top / cover no-repeat;
+    height: 70vh;
+    overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    height: 70vh; /* desktop lebih pendek */
 }
 
-/* ISI HERO (TEXT CENTER FIX) */
+/* GAMBAR HERO */
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+/* OVERLAY */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+/* CONTENT */
 .hero-content {
     position: relative;
-    color: var(--putih);
+    z-index: 2;
 
     display: flex;
     flex-direction: column;
@@ -72,6 +86,7 @@ body {
 
     text-align: center;
     gap: 10px;
+    color: var(--putih);
 }
 
 /* JUDUL */
@@ -79,25 +94,14 @@ body {
     margin: 0;
     font-size: 3rem;
     line-height: 1.2;
-
-    color: #ffffff;
-
-    -webkit-text-stroke: 0;
-
     text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
-/* SUBTITLE HERO */
+/* SUBTITLE */
 .hero p {
     margin: 0;
     font-size: 1.2rem;
-    line-height: 1.5;
-
-    color: #ffffff;
     font-weight: 600;
-
-    -webkit-text-stroke: 0;
-
     text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
@@ -113,6 +117,7 @@ body {
 .btn-outline {
     border: 2px solid var(--kuning);
     color: var(--kuning);
+    background: transparent;
 }
 
 /* SECTION */
@@ -161,16 +166,24 @@ body {
     color: var(--putih);
 }
 
-/* MOBILE FIX HERO SIZE */
-@media (max-width: 768px) {
-.hero {
-    height: 55vh;
-
-    padding: 0;
-
-    /* INI KUNCI: PAKAI GAMBAR MOBILE */
-    background: url("/img/header-toraja-mobile.jpg") center / cover no-repeat;
+/* RESPONSIVE */
+.mobile {
+    display: none;
 }
+
+@media (max-width: 768px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .hero {
+        height: 55vh;
+    }
 
     .hero h1 {
         font-size: 2rem;

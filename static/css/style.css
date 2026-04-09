@@ -163,18 +163,21 @@ body {
 
 /* MOBILE FIX HERO SIZE */
 @media (max-width: 768px) {
-    .hero {
-        height: 55vh;
+.hero {
+    height: 55vh;
+    padding: 0;
 
-        /* HAPUS padding biar nempel ke header */
-        padding: 0;
+    /* UBAH INI (KUNCI) */
+    background-size: contain;
 
-        /* BALIK KE NORMAL */
-        background-size: cover;
+    /* POSISI TENGAH ATAS */
+    background-position: center top;
 
-        /* POSISI LEBIH STABIL */
-        background-position: center top;
-    }
+    background-repeat: no-repeat;
+
+    /* WARNA BACKUP */
+    background-color: #000;
+}
 
     .hero h1 {
         font-size: 2rem;

@@ -50,13 +50,22 @@ body {
     position: relative;
 
     width: 100%;
-    aspect-ratio: 16 / 9; /* kunci 1920x1080 */
 
     background: url("/img/header-toraja.jpg") center/cover no-repeat;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    height: 70vh; /* desktop lebih pendek */
+}
+
+/* KHUSUS HP */
+@media (max-width: 768px) {
+    .hero {
+        aspect-ratio: 16 / 9; /* HP tetap proporsional */
+        height: auto;
+    }
 }
 
 /* ISI HERO (TEXT CENTER FIX) */

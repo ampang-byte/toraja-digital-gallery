@@ -69,92 +69,34 @@ body {
     width: 100%;
 }
 
+/* 🔥 FIX AGAR TIDAK ADA CELAH & TIDAK KETUTUP HEADER */
+main {
+    margin-top: 70px;
+}
+
 /* ========================= */
-/* HERO */
+/* HERO (FIX FINAL) */
 /* ========================= */
 
 .hero {
     position: relative;
     width: 100%;
+    height: 590px; /* sesuai tinggi gambar */
     overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding-top: 70px; /* untuk header */
 }
 
-/* ✅ DESKTOP FIX (TIDAK ZOOM & SESUAI RASIO GAMBAR) */
-@media (min-width: 769px) {
-    .hero {
-        height: auto;
-        aspect-ratio: 1920 / 590;
-    }
-
-    .hero-img {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .hero-overlay {
-        position: absolute;
-        inset: 0;
-    }
-}
-
-/* ========================= */
-/* MOBILE (TIDAK DIUBAH) */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-    .hero {
-        height: auto;
-        padding-top: 70px;
-    }
-
-    .desktop {
-        display: none;
-    }
-
-    .mobile {
-        display: block;
-    }
-
-    .hero-img.mobile {
-        position: relative;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .hero-content {
-        position: absolute;
-        inset: 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-}
-
-/* IMAGE DEFAULT */
+/* IMAGE DESKTOP */
 .hero-img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+
     top: 0;
     left: 0;
 }
@@ -301,6 +243,53 @@ body {
     padding: 30px;
     background: var(--hitam);
     color: var(--putih);
+}
+
+/* ========================= */
+/* MOBILE (TIDAK DIRUSAK) */
+/* ========================= */
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .hero-img.mobile {
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .hero-content {
+        position: absolute;
+        inset: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
 }
 
 /* ========================= */

@@ -271,3 +271,59 @@ main {
 .nav a:hover::after {
     width: 100%;
 }
+
+/* ========================= */
+/* HERO CINEMATIC UPGRADE */
+/* ========================= */
+
+/* OVERLAY GRADIENT (lebih hidup dari hitam polos) */
+.hero-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.85)
+    );
+}
+
+/* TITLE LEBIH ELEGAN */
+.hero-title {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
+
+/* SUBTITLE */
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* BUTTON LEBIH HALUS */
+.btn {
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #a31515;
+}
+
+/* BUTTON OUTLINE HOVER */
+.btn-outline:hover {
+    background: var(--kuning);
+    color: black;
+}
+
+/* ANIMASI MASUK */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.2s ease forwards;
+}
+
+/* KEYFRAMES */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

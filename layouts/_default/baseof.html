@@ -6,13 +6,21 @@
 
     <title>{{ .Title }}</title>
 
-    <!-- CSS UTAMA -->
-<link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
-    {{ block "main" . }}{{ end }}
+    <!-- HEADER -->
+    {{ partial "header.html" . }}
+
+    <!-- CONTENT -->
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- FOOTER -->
+    {{ partial "footer.html" . }}
 
 </body>
 </html>

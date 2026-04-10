@@ -321,3 +321,8 @@ body {
         transform: translateY(0);
     }
 }
+
+.hero-img {
+    object-position: center 30%;
+}
+

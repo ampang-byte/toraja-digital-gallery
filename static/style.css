@@ -290,12 +290,12 @@ body {
         font-size: 0.8rem;
     }
 
-    .btn {
-        font-size: 0.85rem;
+    .hero-btns {
+        margin-top: 15px; /* ⬅️ TAMBAHKAN DI SINI */
     }
 
-    .hero-btns {
-        gap: 15px;
+    .btn {
+        font-size: 0.85rem;
     }
 }
 

@@ -69,11 +69,6 @@ body {
     width: 100%;
 }
 
-/* 🔥 FIX AGAR TIDAK ADA CELAH & TIDAK KETUTUP HEADER */
-main {
-    margin-top: 70px;
-}
-
 /* ========================= */
 /* HERO (FIX FINAL) */
 /* ========================= */
@@ -94,7 +89,8 @@ main {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: black; /* biar tidak kosong putih */
     object-position: center;
 
     top: 0;
@@ -307,4 +303,8 @@ main {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.hero-img {
+    object-position: center 20%;
 }

@@ -119,6 +119,8 @@ body {
     align-items: center;
     justify-content: center;
 
+    padding-top: 120px; /* ⬅️ TAMBAHKAN INI */
+
     text-align: center;
     gap: 15px;
     color: var(--putih);
@@ -280,11 +282,19 @@ body {
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.5rem; /* ⬅️ lebih kecil dari sebelumnya */
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+    }
+
+    .hero-btns {
+        gap: 10px;
     }
 }
 

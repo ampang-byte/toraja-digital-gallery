@@ -83,6 +83,15 @@ body {
     width: 100%;
 }
 
+.nav a.active {
+    color: var(--kuning);
+}
+
+/* biar garis bawah langsung aktif */
+.nav a.active::after {
+    width: 100%;
+}
+
 /* ========================= */
 /* HERO DESKTOP FIX */
 /* ========================= */

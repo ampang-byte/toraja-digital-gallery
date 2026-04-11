@@ -14,10 +14,14 @@
 
         <!-- NAV MENU -->
         <nav class="nav">
-            <a href="/">Beranda</a>
-            <a href="/posts/">Artikel</a>
-            <a href="#">Galeri</a>
-            <a href="#">Tentang</a>
-        </nav>
+             <a href="/" class="{{ if eq .RelPermalink "/" }}active{{ end }}">Beranda</a>
+
+             <a href="/posts/" class="{{ if in .RelPermalink "/posts/" }}active{{ end }}">Artikel</a>
+
+             <a href="/galeri/" class="{{ if in .RelPermalink "/galeri/" }}active{{ end }}">Galeri</a>
+
+             <a href="/tentang/" class="{{ if in .RelPermalink "/tentang/" }}active{{ end }}">Tentang</a>
+         </nav>
+
     </div>
 </header>

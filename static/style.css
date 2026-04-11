@@ -46,6 +46,18 @@ body {
     letter-spacing: 1px;
 }
 
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+    transition: 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
 .nav a {
     color: var(--putih);
     margin-left: 25px;
@@ -259,6 +271,10 @@ body {
 
     .mobile {
         display: block;
+    }
+
+    .logo img {
+        height: 35px;
     }
 
     .hero {

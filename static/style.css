@@ -119,7 +119,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding-top: 120px; /* ⬅️ TAMBAHKAN INI */
+    padding-top: 10vh; /* responsive, lebih smooth dari px */
 
     text-align: center;
     gap: 15px;

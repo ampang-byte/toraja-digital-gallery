@@ -1,16 +1,18 @@
 +++
 
-title = "Rumah Tradisional Toraja (Tongkonan)"
+title: "Rumah Tradisional Toraja (Tongkonan)"
 
-date = 2026-04-12
-
-image = "/img/rumah-tradisional-tongkonan-c1920.webp"
+date: 2026-04-12
 
 
 
-sumber = "Leiden University Libraries"
+image: "/img/rumah-tradisional-tongkonan-c1920.webp"
 
-tahun = "Circa 1920"
+sumber: "Leiden University Libraries"
+
+tahun: "Circa 1920"
+
+lokasi: "Toraja, Sulawesi Selatan"
 
 +++
 

@@ -549,13 +549,14 @@ body {
 }
 
 .gallery-info p {
+    margin: 8px 0;
     text-align: left;
     line-height: 1.6;
 }
 
 .gallery-info p strong {
     display: inline-block;
-    width: 160px;
+    width: 170px;
 }
 
 /* SHARE */

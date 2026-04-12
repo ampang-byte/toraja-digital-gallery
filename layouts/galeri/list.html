@@ -4,6 +4,9 @@
     <div class="container">
         <h1>Galeri</h1>
 
+        <!-- DEBUG -->
+        <p>Total: {{ len (where .Site.Pages "Section" "galeri") }}</p> 
+
         <div class="grid">
             {{ range where .Site.Pages "Section" "galeri" }}
             <a href="{{ .RelPermalink }}" class="card">

@@ -485,8 +485,9 @@ body {
 /* GRID GALERI MODERN */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
+    gap: 25px;
+    justify-content: start; /* biar tetap kiri tapi rapi */
 }
 
 /* CARD FULL IMAGE */
@@ -529,29 +530,59 @@ body {
 /* DETAIL LAYOUT */
 .gallery-detail {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
     align-items: start;
 }
 
 /* GAMBAR */
 .gallery-image img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* INFO */
 .gallery-info h1 {
-    margin-top: 0;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.gallery-info p {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.gallery-info p strong {
+    display: inline-block;
+    width: 160px;
 }
 
 /* SHARE */
 .gallery-share {
-    margin-top: 40px;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.gallery-share span {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .gallery-share a {
-    margin-right: 15px;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: var(--kuning);
+    color: #000;
     text-decoration: none;
-    color: var(--kuning);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.gallery-share a:hover {
+    opacity: 0.8;
 }

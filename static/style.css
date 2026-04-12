@@ -399,3 +399,18 @@ body {
         max-height: 300px;
     }
 }
+
+/* ========================= */
+/* NAVBAR SCROLL EFFECT */
+/* ========================= */
+
+.header {
+    transition: all 0.3s ease;
+}
+
+/* saat discroll */
+.header.scrolled {
+    background: rgba(15,15,15,0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}

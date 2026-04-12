@@ -4,24 +4,23 @@
     <div class="container">
         <h1>Galeri</h1>
 
-        <!-- DEBUG TOTAL -->
-        <p>Total: {{ len (where (where .Site.Pages "Section" "galeri") "IsPage" true) }}</p>
-
-        <div class="grid">
-            {{ range where (where .Site.Pages "Section" "galeri") "IsPage" true }}
+        <div class="galeri-list">
+            {{ range where .Site.RegularPages "Section" "galeri" }}
 
             <a href="{{ .RelPermalink }}" class="gallery-card">
-               <img src="{{ .Params.image }}" alt="{{ .Title }}">
+
+               <img src="{{ .Params.image }}">
 
                <div class="gallery-overlay">
                     <h3>{{ .Title }}</h3>
                     <p>{{ .Date.Format "02 Jan 2006" }}</p>
                </div>
+
             </a>
 
             {{ end }}
-
         </div>
+
     </div>
 </section>
 

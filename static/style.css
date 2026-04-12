@@ -429,6 +429,7 @@ body {
     border-radius: 14px;
     display: block;
     background: #000;
+    aspect-ratio: 4/3;
 }
 
 /* gambar lebih natural */

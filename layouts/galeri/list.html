@@ -2,19 +2,19 @@
 
 <section class="section">
     <div class="container">
+
         <h1>Galeri</h1>
 
-        <div class="galeri-list">
+        <div class="gallery-grid">
             {{ range where .Site.RegularPages "Section" "galeri" }}
 
             <a href="{{ .RelPermalink }}" class="gallery-card">
 
-               <img src="{{ .Params.image }}">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}">
 
-               <div class="gallery-overlay">
+                <div class="gallery-overlay">
                     <h3>{{ .Title }}</h3>
-                    <p>{{ .Date.Format "02 Jan 2006" }}</p>
-               </div>
+                </div>
 
             </a>
 

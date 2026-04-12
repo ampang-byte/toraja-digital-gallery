@@ -3,13 +3,35 @@
 <section class="section">
     <div class="container">
 
-        <h1>{{ .Title }}</h1>
-        <p>{{ .Date.Format "02 Jan 2006" }}</p>
+        <div class="gallery-detail">
 
-        <img src="{{ .Params.image }}" style="width:100%; max-width:800px; border-radius:10px;">
+            <!-- KIRI (GAMBAR) -->
+            <div class="gallery-image">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}">
+            </div>
 
-        <div style="margin-top:20px;">
-            {{ .Content }}
+            <!-- KANAN (INFO) -->
+            <div class="gallery-info">
+                <h1>{{ .Title }}</h1>
+
+                <p><strong>Tanggal:</strong> {{ .Date.Format "02 Jan 2006" }}</p>
+                <p><strong>Sumber:</strong> {{ .Params.sumber }}</p>
+                <p><strong>Tahun Dokumentasi:</strong> {{ .Params.tahun }}</p>
+
+                <div class="gallery-description">
+                    {{ .Content }}
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SHARE -->
+        <div class="gallery-share">
+            <p>Bagikan:</p>
+            <a href="#">Facebook</a>
+            <a href="#">X</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
         </div>
 
     </div>

@@ -5,7 +5,7 @@
         <h1>Galeri</h1>
 
         <div class="grid">
-            {{ range .Pages }}
+            {{ range where .Site.RegularPages "Section" "galeri" }}
             <a href="{{ .RelPermalink }}" class="card">
                 <img src="{{ .Params.image }}" style="width:100%; border-radius:10px;">
                 

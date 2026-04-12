@@ -5,10 +5,10 @@
         <h1>Galeri</h1>
 
         <!-- DEBUG -->
-        <p>Total: {{ len (where .Site.Pages "Section" "galeri") }}</p> 
+        <p>Total: {{ len (where (where .Site.Pages "Section" "galeri") "IsPage" true) }}</p>
 
         <div class="grid">
-            {{ range where .Site.Pages "Section" "galeri" }}
+            {{ range where (where .Site.Pages "Section" "galeri") "IsPage" true }}
             <a href="{{ .RelPermalink }}" class="card">
                 <img src="{{ .Params.image }}" style="width:100%; border-radius:10px;">
                 

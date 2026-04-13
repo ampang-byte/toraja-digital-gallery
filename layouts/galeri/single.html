@@ -5,10 +5,12 @@
 
         <div class="gallery-detail">
 
+            <!-- GAMBAR -->
             <div class="gallery-image">
                 <img src="{{ .Params.image }}" alt="{{ .Title }}">
             </div>
 
+            <!-- INFO -->
             <div class="gallery-info">
 
                 <h1>{{ .Title }}</h1>
@@ -21,12 +23,22 @@
                     {{ .Content }}
                 </div>
 
+                <!-- SHARE REAL -->
                 <div class="gallery-share">
                     <span>Bagikan:</span>
-                    <a href="#">Facebook</a>
-                    <a href="#">X</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">TikTok</a>
+
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank">
+                        Facebook
+                    </a>
+
+                    <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank">
+                        X
+                    </a>
+
+                    <a href="https://api.whatsapp.com/send?text={{ .Title }} {{ .Permalink }}" target="_blank">
+                        WhatsApp
+                    </a>
+
                 </div>
 
             </div>

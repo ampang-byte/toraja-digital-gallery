@@ -322,11 +322,19 @@ body {
     color: var(--putih);
 }
 
+.menu-icon {
+    display: none; /* ⬅️ sembunyikan di desktop */
+}
+
 /* ========================= */
 /* MOBILE */
 /* ========================= */
 
 @media (max-width: 768px) {
+
+    .menu-icon {
+        display: block; /* ⬅️ hanya muncul di HP */
+    }
 
     .gallery-detail {
         grid-template-columns: 1fr;

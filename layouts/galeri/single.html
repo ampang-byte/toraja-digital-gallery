@@ -5,35 +5,22 @@
 
         <div class="gallery-detail">
 
-            <!-- KIRI (GAMBAR) -->
             <div class="gallery-image">
                 <img src="{{ .Params.image }}" alt="{{ .Title }}">
             </div>
 
-            <!-- KANAN (INFO) -->
             <div class="gallery-info">
 
                 <h1>{{ .Title }}</h1>
 
-                <!-- INFO DATA -->
-                {{ with .Params.sumber }}
-                <p><strong>Sumber:</strong> {{ . }}</p>
-                {{ end }}
+                <p><strong>Sumber:</strong> {{ .Params.sumber }}</p>
+                <p><strong>Tahun Dokumentasi:</strong> {{ .Params.tahun }}</p>
+                <p><strong>Lokasi:</strong> {{ .Params.lokasi }}</p>
 
-                {{ with .Params.tahun }}
-                <p><strong>Tahun Dokumentasi:</strong> {{ . }}</p>
-                {{ end }}
-
-                {{ with .Params.lokasi }}
-                <p><strong>Lokasi:</strong> {{ . }}</p>
-                {{ end }}
-
-                <!-- DESKRIPSI -->
                 <div style="margin-top:20px;">
                     {{ .Content }}
                 </div>
 
-                <!-- SHARE (SUDAH DIPINDAH KE BAWAH DESKRIPSI) -->
                 <div class="gallery-share">
                     <span>Bagikan:</span>
                     <a href="#">Facebook</a>

@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <title>{{ .Title }}</title>
 
-    <!-- HUBUNGKAN CSS -->
     <link rel="stylesheet" href="/css/style.css">
-
 </head>
 <body>
 
-    {{ block "main" . }}{{ end }}
+<!-- HEADER / NAVBAR -->
+<header class="header">
+    <div class="container">
+
+        <div class="logo">
+            Toraja Digital Gallery
+        </div>
+
+        <nav class="nav">
+            <a href="/">Home</a>
+            <a href="/galeri/">Galeri</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+{{ block "main" . }}{{ end }}
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Toraja Digital Gallery</p>
+</footer>
 
 </body>
 </html>

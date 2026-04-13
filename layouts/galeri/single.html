@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+<section class="section">
+    <div class="container">
+
+        <div class="gallery-detail">
+
+            <!-- KIRI (GAMBAR) -->
+            <div class="gallery-image">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}">
+            </div>
+
+            <!-- KANAN (INFO) -->
+            <div class="gallery-info">
+
+                <h1>{{ .Title }}</h1>
+
+                <!-- INFO DATA -->
+                {{ with .Params.sumber }}
+                <p><strong>Sumber:</strong> {{ . }}</p>
+                {{ end }}
+
+                {{ with .Params.tahun }}
+                <p><strong>Tahun Dokumentasi:</strong> {{ . }}</p>
+                {{ end }}
+
+                {{ with .Params.lokasi }}
+                <p><strong>Lokasi:</strong> {{ . }}</p>
+                {{ end }}
+
+                <!-- DESKRIPSI -->
+                <div style="margin-top:20px;">
+                    {{ .Content }}
+                </div>
+
+                <!-- SHARE (SUDAH DIPINDAH KE BAWAH DESKRIPSI) -->
+                <div class="gallery-share">
+                    <span>Bagikan:</span>
+                    <a href="#">Facebook</a>
+                    <a href="#">X</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{{ end }}

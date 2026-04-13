@@ -2,8 +2,6 @@
 
 title: "Rumah Tradisional Toraja (Tongkonan)"
 
-date: 2026-04-12
-
 
 
 image: "/img/rumah-tradisional-tongkonan-c1920.webp"
@@ -19,6 +17,4 @@ lokasi: "Toraja, Sulawesi Selatan"
 
 
 Rumah tradisional khas Toraja (Tongkonan).
-
-
 

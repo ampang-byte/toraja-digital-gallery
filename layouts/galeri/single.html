@@ -5,12 +5,12 @@
 
         <div class="gallery-detail">
 
-            <!-- KIRI (GAMBAR) -->
+            <!-- KIRI -->
             <div class="gallery-image">
                 <img src="{{ .Params.image }}" alt="{{ .Title }}">
             </div>
 
-            <!-- KANAN (INFO) -->
+            <!-- KANAN -->
             <div class="gallery-info">
 
                 <h1>{{ .Title }}</h1>
@@ -20,19 +20,20 @@
                 <p><strong>Lokasi:</strong> {{ .Params.lokasi }}</p>
 
                 <div style="margin-top:20px;">
-                     {{ .Content }}
+                    {{ .Content }}
                 </div>
 
-                <!-- PINDAHKAN SHARE KE SINI -->
                 <div class="gallery-share">
-                     <span>Bagikan:</span>
-                     <a href="#">Facebook</a>
-                     <a href="#">X</a>
-                     <a href="#">Instagram</a>
-                     <a href="#">TikTok</a>
+                    <span>Bagikan:</span>
+                    <a href="#">Facebook</a>
+                    <a href="#">X</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
                 </div>
 
-            </div>
+            </div> <!-- ✅ tutup gallery-info -->
+
+        </div> <!-- ✅ tutup gallery-detail -->
 
     </div>
 </section>

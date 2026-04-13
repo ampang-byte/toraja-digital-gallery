@@ -1,19 +1,9 @@
 {{ define "main" }}
 
-<section class="section">
-    <div class="container">
+<h1>GALERI WORKING</h1>
 
-        <h1>Galeri</h1>
-
-        {{ range .Pages }}
-            <div style="margin-bottom:20px;">
-                <a href="{{ .RelPermalink }}">
-                    <h3>{{ .Title }}</h3>
-                </a>
-            </div>
-        {{ end }}
-
-    </div>
-</section>
+{{ range .Pages }}
+    <p>{{ .Title }}</p>
+{{ end }}
 
 {{ end }}

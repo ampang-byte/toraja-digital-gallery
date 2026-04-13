@@ -2,6 +2,8 @@
 
 title: "Galeri"
 
+type: "galeri"
+
 \---
 
 

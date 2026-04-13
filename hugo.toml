@@ -1,7 +1,6 @@
-baseURL = "https://toraja-digital-gallery.pages.dev/"
+baseURL = "https://example.org/"
 languageCode = "id-id"
-title = "Toraja Digital Gallery"
-
+title = "Test Hugo"
 [params]
     ShowReadingTime = true
 

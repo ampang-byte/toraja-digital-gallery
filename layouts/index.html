@@ -1,18 +1,46 @@
 {{ define "main" }}
 
-<!-- HERO -->
 <section class="hero">
-    <img src="/img/rumah-tradisional-tongkonan-c1920.webp" class="hero-img">
+
+    <!-- DESKTOP -->
+    <img src="/img/rumah-tradisional-tongkonan-c1920.webp" class="hero-img desktop">
+
+    <!-- MOBILE -->
+    <img src="/img/rumah-tradisional-tongkonan-c1920.webp" class="hero-img mobile">
 
     <div class="hero-overlay"></div>
 
-    <div class="hero-content">
+    <div class="hero-content fade-in">
         <h1 class="hero-title">Toraja Digital Gallery</h1>
-        <p class="hero-subtitle">Menjaga Tradisi, Melintasi Zaman.</p>
+        <p class="hero-subtitle">Menjaga Tradisi, Melintasi Zaman</p>
 
         <div class="hero-btns">
             <a href="/galeri/" class="btn">Lihat Galeri</a>
         </div>
+    </div>
+
+</section>
+
+<!-- GALERI PREVIEW -->
+<section class="section">
+    <div class="container">
+
+        <h2>Galeri Terbaru</h2>
+
+        <div class="gallery-grid">
+            {{ range first 3 (where .Site.RegularPages "Section" "galeri") }}
+
+            <a href="{{ .RelPermalink }}" class="gallery-card">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}">
+
+                <div class="gallery-overlay">
+                    <h3>{{ .Title }}</h3>
+                </div>
+            </a>
+
+            {{ end }}
+        </div>
+
     </div>
 </section>
 

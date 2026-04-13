@@ -5,21 +5,13 @@
 
         <h1>Galeri</h1>
 
-        <div class="gallery-grid">
-            {{ range where .Site.RegularPages "Section" "galeri" }}
-
-            <a href="{{ .RelPermalink }}" class="gallery-card">
-
-                <img src="{{ .Params.image }}" alt="{{ .Title }}">
-
-                <div class="gallery-overlay">
+        {{ range .Pages }}
+            <div style="margin-bottom:20px;">
+                <a href="{{ .RelPermalink }}">
                     <h3>{{ .Title }}</h3>
-                </div>
-
-            </a>
-
-            {{ end }}
-        </div>
+                </a>
+            </div>
+        {{ end }}
 
     </div>
 </section>

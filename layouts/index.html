@@ -1,46 +1,43 @@
 {{ define "main" }}
 
+<!-- HERO -->
 <section class="hero">
 
-    <!-- DESKTOP -->
-    <img src="/img/rumah-tradisional-tongkonan-c1920.webp" class="hero-img desktop">
+    <!-- GAMBAR DESKTOP -->
+    <img src="/img/header-toraja.jpg" class="hero-img desktop">
 
-    <!-- MOBILE -->
-    <img src="/img/rumah-tradisional-tongkonan-c1920.webp" class="hero-img mobile">
+    <!-- GAMBAR MOBILE -->
+    <img src="/img/header-toraja-mobile.jpg" class="hero-img mobile">
 
+    <!-- OVERLAY -->
     <div class="hero-overlay"></div>
 
+    <!-- CONTENT -->
     <div class="hero-content fade-in">
         <h1 class="hero-title">Toraja Digital Gallery</h1>
         <p class="hero-subtitle">Menjaga Tradisi, Melintasi Zaman</p>
 
         <div class="hero-btns">
-            <a href="/galeri/" class="btn">Lihat Galeri</a>
+            <a href="/posts/" class="btn">Jelajahi Artikel</a>
+            <a href="/galeri/" class="btn btn-outline">Lihat Galeri</a>
         </div>
     </div>
 
 </section>
 
-<!-- GALERI PREVIEW -->
+<!-- ARTIKEL -->
 <section class="section">
-    <div class="container">
+    <h2>Artikel Terbaru</h2>
 
-        <h2>Galeri Terbaru</h2>
-
-        <div class="gallery-grid">
-            {{ range first 3 (where .Site.RegularPages "Section" "galeri") }}
-
-            <a href="{{ .RelPermalink }}" class="gallery-card">
-                <img src="{{ .Params.image }}" alt="{{ .Title }}">
-
-                <div class="gallery-overlay">
-                    <h3>{{ .Title }}</h3>
-                </div>
-            </a>
-
-            {{ end }}
-        </div>
-
+    <div class="grid">
+        {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
+        <a href="{{ .RelPermalink }}" class="card">
+            <div class="card-content">
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Summary }}</p>
+            </div>
+        </a>
+        {{ end }}
     </div>
 </section>
 

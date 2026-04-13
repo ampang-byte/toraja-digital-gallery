@@ -2,34 +2,37 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{{ .Title }}</title>
 
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
 
-<header class="header">
-    <div class="container">
+    <!-- HEADER -->
+    {{ partial "header.html" . }}
 
-        <div class="logo">
-            <a href="/" style="color:white; text-decoration:none;">
-                Toraja Digital Gallery
-            </a>
-        </div>
+    <!-- CONTENT -->
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
 
-        <nav class="nav">
-            <a href="/">Home</a>
-            <a href="/galeri/">Galeri</a>
-        </nav>
+    <!-- FOOTER -->
+    {{ partial "footer.html" . }}
 
-    </div>
-</header>
+<script>
+window.addEventListener("scroll", function() {
+    const header = document.querySelector(".header");
 
-{{ block "main" . }}{{ end }}
-
-<footer class="footer">
-    <p>© 2026 Toraja Digital Gallery</p>
-</footer>
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
 
 </body>
 </html>

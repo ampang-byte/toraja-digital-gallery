@@ -133,22 +133,34 @@ body {
 
 /* BUTTON */
 .btn {
+    display: inline-block; /* ⬅️ WAJIB */
+    position: relative;
+
     color: var(--kuning);
     text-decoration: none;
-    margin: 0 10px;
-    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    padding-bottom: 5px; /* kasih ruang garis */
 }
 
+/* garis bawah */
 .btn::after {
     content: "";
     position: absolute;
-    bottom: -5px;
+
+    left: 50%;              /* ⬅️ kunci center */
+    bottom: 0;
+    transform: translateX(-50%);
+
     width: 0%;
     height: 2px;
     background: var(--kuning);
-    transition: 0.3s;
+
+    transition: 0.3s ease;
 }
 
+/* hover */
 .btn:hover::after {
     width: 100%;
 }

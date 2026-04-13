@@ -266,14 +266,16 @@ body {
 }
 
 .gallery-info h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
 
 .gallery-info p {
     margin: 8px 0;
     line-height: 1.6;
     font-size: 0.95rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
 }
 
 .gallery-info p strong {

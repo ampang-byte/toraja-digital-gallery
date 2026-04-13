@@ -127,11 +127,17 @@ body {
     margin-bottom: 20px;
 }
 
+/* BUTTON */
+
 .hero-btns {
-    margin-top: 40px;
+    margin-top: 70px;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* ⬅️ ini yang atur jarak antar tombol */
+    flex-wrap: wrap;
 }
 
-/* BUTTON */
 .btn {
     display: inline-block; /* ⬅️ WAJIB */
     position: relative;
@@ -139,7 +145,7 @@ body {
     color: var(--kuning);
     text-decoration: none;
     font-weight: 600;
-    letter-spacing: 30px;
+    letter-spacing: 1px;
 
     padding-bottom: 5px; /* kasih ruang garis */
 }

@@ -139,7 +139,7 @@ body {
     color: var(--kuning);
     text-decoration: none;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 30px;
 
     padding-bottom: 5px; /* kasih ruang garis */
 }

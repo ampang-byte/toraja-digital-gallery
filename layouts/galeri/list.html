@@ -6,21 +6,19 @@
         <h1>Galeri</h1>
 
         <div class="gallery-grid">
-
             {{ range .Pages }}
-
             <a href="{{ .RelPermalink }}" class="gallery-card">
 
+                <!-- GAMBAR -->
                 <img src="{{ .Params.image }}" alt="{{ .Title }}">
 
+                <!-- OVERLAY -->
                 <div class="gallery-overlay">
                     <h3>{{ .Title }}</h3>
                 </div>
 
             </a>
-
             {{ end }}
-
         </div>
 
     </div>

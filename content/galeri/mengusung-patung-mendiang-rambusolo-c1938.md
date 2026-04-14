@@ -1,7 +1,7 @@
 ---
 title: "Potret mengusung patung mendiang (tau-tau) dalam upacara pemakaman (Rambu Solo')"
 
-image: "/img/rumah-tradisional-tongkonan-c1920.webp"
+image: "/img/mengusung-patung-mendiang-rambusolo-c1938.webp"
 
 sumber: "Leiden University Libraries"
 

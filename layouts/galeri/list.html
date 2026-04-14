@@ -1,11 +1,29 @@
 {{ define "main" }}
 
-{{ range .Pages }}
+<section class="section">
+    <div class="container">
 
-<p>JUDUL: {{ .Title }}</p>
-<p>IMAGE: {{ .Params.image }}</p>
-<hr>
+        <h1>Galeri</h1>
 
-{{ end }}
+        <div class="gallery-grid">
+
+            {{ range .Pages }}
+
+            <a href="{{ .RelPermalink }}" class="gallery-card">
+
+                <img src="{{ .Params.image }}" alt="{{ .Title }}">
+
+                <div class="gallery-overlay">
+                    <h3>{{ .Title }}</h3>
+                </div>
+
+            </a>
+
+            {{ end }}
+
+        </div>
+
+    </div>
+</section>
 
 {{ end }}

@@ -191,19 +191,15 @@ body {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 360px));
-    gap: 30px;
+    gap: 35px;
     justify-content: center;
 }
 
 /* CARD */
 .gallery-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
     display: block;
-    background: #000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    text-decoration: none;
+    color: #000; /* ⬅️ ini penting */
 }
 
 .gallery-card:hover {
@@ -219,28 +215,40 @@ body {
     transition: 0.4s ease;
 }
 
+.gallery-image {
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    transition: 0.4s ease;
+}
+
 .gallery-card:hover img {
     transform: scale(1.05);
 }
 
-/* OVERLAY */
-.gallery-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-    color: white;
+.gallery-info {
+    margin-top: 10px;
+    text-align: right;
+    background: none; /* pastikan tidak ada bg */
 }
 
-.gallery-overlay h3 {
+.gallery-info h3 {
+    font-size: 0.85rem;   /* lebih kecil & elegan */
+    font-weight: 500;
+    line-height: 1.3;
     margin: 0;
-    font-size: 1.1rem;
+    transition: 0.3s;
+}
 
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.gallery-card:hover .gallery-info h3 {
+    color: var(--kuning);
 }
 
 /* ========================= */
@@ -269,6 +277,16 @@ body {
 .gallery-info h1 {
     font-size: 2.2rem;
     margin-bottom: 20px;
+}
+
+.gallery-info h3 {
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.gallery-card:hover .gallery-info h3 {
+    opacity: 1;
+    color: var(--kuning);
 }
 
 .gallery-info p {

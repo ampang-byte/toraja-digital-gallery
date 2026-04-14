@@ -11,9 +11,13 @@
 
             <a href="{{ .RelPermalink }}" class="gallery-card">
 
-                <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                <!-- GAMBAR -->
+                <div class="gallery-image">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                </div>
 
-                <div class="gallery-overlay">
+                <!-- TEKS DI BAWAH -->
+                <div class="gallery-info">
                     <h3>{{ .Title }}</h3>
                 </div>
 

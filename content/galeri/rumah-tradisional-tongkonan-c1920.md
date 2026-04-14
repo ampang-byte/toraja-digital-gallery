@@ -11,6 +11,3 @@ lokasi: "Toraja, Sulawesi Selatan"
 ---
 
 Rumah tradisional khas Toraja (Tongkonan).
-
-
-

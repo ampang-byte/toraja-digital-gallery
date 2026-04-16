@@ -210,13 +210,15 @@ body {
     transition: all 0.25s ease;
 }
 
-/* hover */
+/* 🔥 HOVER PREMIUM */
 .filter-btn:hover {
     background: var(--kuning);
     color: #000;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* aktif */
+/* ACTIVE */
 .filter-btn.active {
     background: var(--kuning);
     color: #000;

@@ -7,14 +7,12 @@
 
 <div class="gallery-filter">
 
-    <!-- SEMUA -->
     <a href="/galeri/" 
        class="filter-btn {{ if eq .RelPermalink "/galeri/" }}active{{ end }}">
        Semua
     </a>
 
-    <!-- 🔥 INI YANG DIUBAH -->
-    {{ range $name, $taxonomy := .Site.Taxonomies.kategori.Alphabetical }}
+    {{ range $name, $taxonomy := .Site.Taxonomies.kategori }}
 
         <a href="/galeri/kategori/{{ $name }}/"
            class="filter-btn {{ if in $.RelPermalink $name }}active{{ end }}">

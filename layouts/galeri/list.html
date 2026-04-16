@@ -17,10 +17,10 @@
 
             {{ if eq .RelPermalink "/galeri/" }}
 
-                <!-- HALAMAN UTAMA: tampil semua -->
+                <!-- SEMUA -->
                 {{ range .Site.RegularPages.ByDate.Reverse }}
 
-                    {{ if eq .Section "galeri" }}
+                    {{ if .Params.image }}
 
                     <a href="{{ .RelPermalink }}" class="gallery-card">
                         <div class="gallery-image">
@@ -37,12 +37,12 @@
 
             {{ else }}
 
-                <!-- HALAMAN KATEGORI -->
+                <!-- KATEGORI -->
                 {{ $slug := replace .RelPermalink "/galeri/" "" | replace "/" "" }}
 
                 {{ range .Site.RegularPages.ByDate.Reverse }}
 
-                    {{ if and (eq .Section "galeri") (in .Params.kategori $slug) }}
+                    {{ if in .Params.kategori $slug }}
 
                     <a href="{{ .RelPermalink }}" class="gallery-card">
                         <div class="gallery-image">

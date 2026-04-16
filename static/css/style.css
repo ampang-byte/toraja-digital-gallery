@@ -194,6 +194,15 @@ body {
     flex-wrap: wrap;
     gap: 12px;
     margin: 30px 0 40px;
+    position: sticky;
+    top: 70px; /* sesuaikan dengan tinggi header kamu */
+    z-index: 10;
+
+    background: #fff;
+    padding: 10px 0;
+    margin-bottom: 40px;
+
+    border-bottom: 1px solid #eee;
 }
 
 /* tombol */

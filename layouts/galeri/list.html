@@ -7,14 +7,39 @@
 
         <!-- 🔥 FILTER MENU TARUH DI SINI -->
         <div class="gallery-filter">
-            <a href="/galeri/">Semua</a>
-            <a href="/galeri/kategori/ritual-pemakaman/">Ritual Pemakaman</a>
-            <a href="/galeri/kategori/ritual-syukuran/">Ritual Syukuran</a>
-            <a href="/galeri/kategori/arsitektur-seni/">Arsitektur & Seni</a>
-            <a href="/galeri/kategori/jejak-sejarah/">Jejak Sejarah</a>
-            <a href="/galeri/kategori/lanskap-alam/">Lanskap & Alam</a>
-            <a href="/galeri/kategori/sosial-aktivitas/">Sosial & Aktivitas</a>
-        </div>
+            <a href="/galeri/" class="filter-btn {{ if eq .RelPermalink "/galeri/" }}active{{ end }}">Semua</a>
+
+            <a href="/galeri/kategori/ritual-pemakaman/" 
+               class="filter-btn {{ if in .RelPermalink "ritual-pemakaman" }}active{{ end }}">
+               Ritual Pemakaman
+            </a>
+
+            <a href="/galeri/kategori/ritual-syukuran/" 
+               class="filter-btn {{ if in .RelPermalink "ritual-syukuran" }}active{{ end }}">
+               Ritual Syukuran
+            </a>
+
+            <a href="/galeri/kategori/arsitektur-seni/" 
+               class="filter-btn {{ if in .RelPermalink "arsitektur-seni" }}active{{ end }}">
+               Arsitektur & Seni
+            </a>
+
+            <a href="/galeri/kategori/jejak-sejarah/" 
+               class="filter-btn {{ if in .RelPermalink "jejak-sejarah" }}active{{ end }}">
+               Jejak Sejarah
+            </a>
+
+            <a href="/galeri/kategori/lanskap-alam/" 
+               class="filter-btn {{ if in .RelPermalink "lanskap-alam" }}active{{ end }}">
+               Lanskap & Alam
+            </a>
+
+            <a href="/galeri/kategori/sosial-aktivitas/" 
+               class="filter-btn {{ if in .RelPermalink "sosial-aktivitas" }}active{{ end }}">
+               Sosial & Aktivitas
+            </a>
+       </div>
+
 
         <!-- GRID -->
         <div class="gallery-grid">

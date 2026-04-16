@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<section class="section">
+    <div class="container">
+
+        <h1>Kategori: {{ .Title }}</h1>
+
+        <div class="gallery-grid">
+
+            {{ range .Pages }}
+
+            <a href="{{ .RelPermalink }}" class="gallery-card">
+                <div class="gallery-image">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                </div>
+                <div class="gallery-info">
+                    <h3>{{ .Title }}</h3>
+                </div>
+            </a>
+
+            {{ end }}
+
+        </div>
+
+    </div>
+</section>
+
+{{ end }}

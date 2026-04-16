@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<section class="section">
+    <div class="container">
+
+        <h1>Semua Kategori</h1>
+
+        <ul>
+            {{ range .Data.Terms }}
+            <li>
+                <a href="{{ .Page.RelPermalink }}">
+                    {{ .Page.Title }} ({{ .Count }})
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+
+    </div>
+</section>
+
+{{ end }}

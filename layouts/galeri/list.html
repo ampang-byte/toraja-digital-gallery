@@ -3,71 +3,71 @@
 <section class="section">
     <div class="container">
 
-<h1>Galeri</h1>
+        <h1>Galeri</h1>
 
-<div class="gallery-filter">
+        <!-- FILTER -->
+        <div class="gallery-filter">
 
-    <!-- SEMUA -->
-    <a href="/galeri/" 
-       class="filter-btn {{ if eq .RelPermalink "/galeri/" }}active{{ end }}">
-       Semua
-    </a>
+            <a href="/galeri/" 
+               class="filter-btn {{ if eq .RelPermalink "/galeri/" }}active{{ end }}">
+               Semua
+            </a>
 
-    <!-- URUTAN FIX SESUAI PERMINTAAN -->
-    {{ $kategori := slice
-        (dict "slug" "ritual-pemakaman" "label" "Ritual Pemakaman")
-        (dict "slug" "ritual-syukuran" "label" "Ritual Syukuran")
-        (dict "slug" "arsitektur-seni" "label" "Arsitektur dan Seni")
-        (dict "slug" "jejak-sejarah" "label" "Jejak Sejarah")
-        (dict "slug" "lanskap-alam" "label" "Lanskap dan Alam")
-        (dict "slug" "sosial-aktivitas" "label" "Sosial dan Aktivitas")
-    }}
+            {{ $kategori := slice
+                (dict "slug" "ritual-pemakaman" "label" "Ritual Pemakaman")
+                (dict "slug" "ritual-syukuran" "label" "Ritual Syukuran")
+                (dict "slug" "arsitektur-seni" "label" "Arsitektur dan Seni")
+                (dict "slug" "jejak-sejarah" "label" "Jejak Sejarah")
+                (dict "slug" "lanskap-alam" "label" "Lanskap dan Alam")
+                (dict "slug" "sosial-aktivitas" "label" "Sosial dan Aktivitas")
+            }}
 
-    {{ range $kategori }}
+            {{ range $kategori }}
 
-        <a href="/galeri/kategori/{{ .slug }}/"
-           class="filter-btn {{ if in $.RelPermalink .slug }}active{{ end }}">
+                <a href="/galeri/kategori/{{ .slug }}/"
+                   class="filter-btn {{ if in $.RelPermalink .slug }}active{{ end }}">
+                    {{ .label }}
+                </a>
 
-            {{ .label }}
+            {{ end }}
 
-        </a>
+        </div>
 
-    {{ end }}
+        <!-- GRID -->
+        {{ $current := .RelPermalink }}
 
-</div>
+        <div class="gallery-grid">
 
-<!-- GRID -->
-{{ $current := .RelPermalink }}
+        {{ range .Site.RegularPages.ByDate.Reverse }}
 
-<div class="gallery-grid">
+            {{ $show := false }}
 
-{{ range .Site.RegularPages.ByDate.Reverse }}
+            {{ if eq $current "/galeri/" }}
+                {{ $show = true }}
+            {{ else }}
+                {{ if in .Params.kategori (replace $current "/galeri/kategori/" "" | replace "/" "") }}
+                    {{ $show = true }}
+                {{ end }}
+            {{ end }}
 
-    {{ $show := false }}
+            {{ if $show }}
 
-    <!-- HALAMAN SEMUA -->
-    {{ if eq $current "/galeri/" }}
-        {{ $show = true }}
-    {{ else }}
-        <!-- HALAMAN KATEGORI -->
-        {{ if in .Params.kategori (replace $current "/galeri/kategori/" "" | replace "/" "") }}
-            {{ $show = true }}
+                <a href="{{ .RelPermalink }}" class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>{{ .Title }}</h3>
+                    </div>
+                </a>
+
+            {{ end }}
+
         {{ end }}
-    {{ end }}
 
-    {{ if $show }}
+        </div>
 
-        <a href="{{ .RelPermalink }}" class="gallery-card">
-            <div class="gallery-image">
-                <img src="{{ .Params.image }}" alt="{{ .Title }}">
-            </div>
-            <div class="gallery-info">
-                <h3>{{ .Title }}</h3>
-            </div>
-        </a>
-
-    {{ end }}
+    </div>
+</section>
 
 {{ end }}
-
-</div>

@@ -1,6 +1,7 @@
 baseURL = "https://example.org/"
 languageCode = "id-id"
 title = "Test Hugo"
+
 [params]
     ShowReadingTime = true
 
@@ -8,3 +9,6 @@ title = "Test Hugo"
     enabled = true
     title = "Toraja Digital Gallery"
     subtitle = "Menjaga Tradisi, Melintasi Zaman."
+
+[taxonomies]
+  kategori = "kategori"

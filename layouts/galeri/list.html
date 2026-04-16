@@ -5,6 +5,15 @@
 
         <h1>Galeri</h1>
 
+        <!-- 🔥 FILTER MENU TARUH DI SINI -->
+        <div class="gallery-filter">
+            <a href="/galeri/">Semua</a>
+            <a href="/galeri/kategori/ritual-pemakaman/">Ritual Pemakaman</a>
+            <a href="/galeri/kategori/sosial-aktivitas/">Sosial & Aktivitas</a>
+            <a href="/galeri/kategori/arsitektur-seni/">Arsitektur & Seni</a>
+        </div>
+
+        <!-- GRID -->
         <div class="gallery-grid">
 
             {{ range .Pages.ByDate.Reverse }}

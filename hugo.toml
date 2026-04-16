@@ -12,3 +12,6 @@ title = "Test Hugo"
 
 [taxonomies]
   kategori = "kategori"
+
+[permalinks]
+  kategori = "/galeri/kategori/:slug/"

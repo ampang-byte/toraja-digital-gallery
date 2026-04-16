@@ -5,41 +5,28 @@
 
         <h1>Galeri</h1>
 
-        <!-- 🔥 FILTER MENU TARUH DI SINI -->
-        <div class="gallery-filter">
-            <a href="/galeri/" class="filter-btn {{ if eq .RelPermalink "/galeri/" }}active{{ end }}">Semua</a>
+<!-- 🔥 FILTER AUTO -->
+<div class="gallery-filter">
 
-            <a href="/galeri/kategori/ritual-pemakaman/" 
-               class="filter-btn {{ if in .RelPermalink "ritual-pemakaman" }}active{{ end }}">
-               Ritual Pemakaman
-            </a>
+    <!-- SEMUA -->
+    <a href="/galeri/" 
+       class="filter-btn {{ if eq .RelPermalink "/galeri/" }}active{{ end }}">
+       Semua
+    </a>
 
-            <a href="/galeri/kategori/ritual-syukuran/" 
-               class="filter-btn {{ if in .RelPermalink "ritual-syukuran" }}active{{ end }}">
-               Ritual Syukuran
-            </a>
+    <!-- AUTO KATEGORI -->
+    {{ range $name, $taxonomy := .Site.Taxonomies.kategori }}
 
-            <a href="/galeri/kategori/arsitektur-seni/" 
-               class="filter-btn {{ if in .RelPermalink "arsitektur-seni" }}active{{ end }}">
-               Arsitektur & Seni
-            </a>
+        <a href="/galeri/kategori/{{ $name | urlize }}/"
+           class="filter-btn {{ if in $.RelPermalink $name }}active{{ end }}">
 
-            <a href="/galeri/kategori/jejak-sejarah/" 
-               class="filter-btn {{ if in .RelPermalink "jejak-sejarah" }}active{{ end }}">
-               Jejak Sejarah
-            </a>
+            {{ $name | humanize }}
 
-            <a href="/galeri/kategori/lanskap-alam/" 
-               class="filter-btn {{ if in .RelPermalink "lanskap-alam" }}active{{ end }}">
-               Lanskap & Alam
-            </a>
+        </a>
 
-            <a href="/galeri/kategori/sosial-aktivitas/" 
-               class="filter-btn {{ if in .RelPermalink "sosial-aktivitas" }}active{{ end }}">
-               Sosial & Aktivitas
-            </a>
-       </div>
+    {{ end }}
 
+</div>
 
         <!-- GRID -->
         <div class="gallery-grid">

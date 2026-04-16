@@ -7,20 +7,19 @@
 
         <div class="gallery-grid">
 
-            {{ $kategori := .Params.kategori }}
+            {{ $path := .RelPermalink }}
+            {{ $kategori := replace $path "/galeri/" "" | replace "/" "" }}
 
             {{ range .Site.RegularPages.ByDate.Reverse }}
 
-                {{ if or (not $kategori) (in .Params.kategori $kategori) }}
+                {{ if or (eq $kategori "") (in .Params.kategori $kategori) }}
 
                 <a href="{{ .RelPermalink }}" class="gallery-card">
 
-                    <!-- GAMBAR -->
                     <div class="gallery-image">
                         <img src="{{ .Params.image }}" alt="{{ .Title }}">
                     </div>
 
-                    <!-- JUDUL -->
                     <div class="gallery-info">
                         <h3>{{ .Title }}</h3>
                     </div>

@@ -3,11 +3,41 @@
 <section class="section">
     <div class="container">
 
-        <h1>Kategori: {{ .Title }}</h1>
+        <h1>
+            Kategori: {{ .Title }}
+        </h1>
 
+        <!-- FILTER -->
+        <div class="gallery-filter">
+
+            <a href="/galeri/" class="filter-btn">
+                Semua
+            </a>
+
+            {{ $kategori := slice
+                (dict "slug" "ritual-pemakaman" "label" "Ritual Pemakaman")
+                (dict "slug" "ritual-syukuran" "label" "Ritual Syukuran")
+                (dict "slug" "arsitektur-seni" "label" "Arsitektur dan Seni")
+                (dict "slug" "jejak-sejarah" "label" "Jejak Sejarah")
+                (dict "slug" "lanskap-alam" "label" "Lanskap dan Alam")
+                (dict "slug" "sosial-aktivitas" "label" "Sosial dan Aktivitas")
+            }}
+
+            {{ range $kategori }}
+
+                <a href="/galeri/kategori/{{ .slug }}/"
+                   class="filter-btn {{ if eq $.Title .label }}active{{ end }}">
+                    {{ .label }}
+                </a>
+
+            {{ end }}
+
+        </div>
+
+        <!-- GRID -->
         <div class="gallery-grid">
 
-            {{ range .Pages }}
+        {{ range .Pages.ByDate.Reverse }}
 
             <a href="{{ .RelPermalink }}" class="gallery-card">
                 <div class="gallery-image">
@@ -18,7 +48,7 @@
                 </div>
             </a>
 
-            {{ end }}
+        {{ end }}
 
         </div>
 

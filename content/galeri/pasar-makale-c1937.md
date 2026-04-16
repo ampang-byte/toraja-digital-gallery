@@ -1,17 +1,17 @@
 ---
-title: "Potret Gereja di Kalambe', Tikala"
+title: "Potret pasar di Makale, Toraja"
 
-image: "/img/gereja-kalambe-c1937.webp"
+image: "/img/pasar-makale-c1937.webp"
 
 sumber: "Leiden University Libraries"
 
 tahun: "Circa 1937"
 
-lokasi: "Kalambe', Tikala, Toraja, Sulawesi Selatan"
+lokasi: "Makale, Toraja, Sulawesi Selatan"
 
 kategori:
+- sosial-aktivitas
 - jejak-sejarah
-- lanskap-alam
 ---
 
-Gereja di Kalambe', Tikala, Toraja, Sulawesi Selatan
+Pasar di Makale, Toraja, Sulawesi Selatan

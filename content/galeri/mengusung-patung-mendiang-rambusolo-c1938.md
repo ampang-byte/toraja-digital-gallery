@@ -10,8 +10,8 @@ tahun: "Circa 1938"
 lokasi: "Toraja, Sulawesi Selatan"
 
 kategori:
-  - ritual-pemakaman
-  - sosial-aktivitas
+- ritual-pemakaman
+- sosial-aktivitas
 ---
 
 mengusung patung mendiang (tau-tau) dalam upacara pemakaman (Rambu Solo').

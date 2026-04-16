@@ -3,59 +3,20 @@
 <section class="section">
     <div class="container">
 
-        <h1>{{ .Title }}</h1>
-
-        <!-- FILTER MENU -->
-        <div class="gallery-filter">
-            <a href="/galeri/">Semua</a>
-            <a href="/galeri/ritual-pemakaman/">Ritual Pemakaman</a>
-            <a href="/galeri/sosial-aktivitas/">Sosial & Aktivitas</a>
-            <a href="/galeri/arsitektur-seni/">Arsitektur & Seni</a>
-        </div>
+        <h1>Galeri</h1>
 
         <div class="gallery-grid">
 
-            {{ if eq .RelPermalink "/galeri/" }}
+            {{ range .Pages.ByDate.Reverse }}
 
-                <!-- SEMUA -->
-                {{ range .Site.RegularPages.ByDate.Reverse }}
-
-                    {{ if .Params.image }}
-
-                    <a href="{{ .RelPermalink }}" class="gallery-card">
-                        <div class="gallery-image">
-                            <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                        </div>
-                        <div class="gallery-info">
-                            <h3>{{ .Title }}</h3>
-                        </div>
-                    </a>
-
-                    {{ end }}
-
-                {{ end }}
-
-            {{ else }}
-
-                <!-- KATEGORI -->
-                {{ $slug := replace .RelPermalink "/galeri/" "" | replace "/" "" }}
-
-                {{ range .Site.RegularPages.ByDate.Reverse }}
-
-                    {{ if in .Params.kategori $slug }}
-
-                    <a href="{{ .RelPermalink }}" class="gallery-card">
-                        <div class="gallery-image">
-                            <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                        </div>
-                        <div class="gallery-info">
-                            <h3>{{ .Title }}</h3>
-                        </div>
-                    </a>
-
-                    {{ end }}
-
-                {{ end }}
+            <a href="{{ .RelPermalink }}" class="gallery-card">
+                <div class="gallery-image">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                </div>
+                <div class="gallery-info">
+                    <h3>{{ .Title }}</h3>
+                </div>
+            </a>
 
             {{ end }}
 

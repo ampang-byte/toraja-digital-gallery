@@ -36,25 +36,37 @@
 
 </div>
 
-        <!-- GRID -->
-        <div class="gallery-grid">
+{{ $current := .RelPermalink }}
 
-            {{ range .Pages.ByDate.Reverse }}
+<div class="gallery-grid">
 
-            <a href="{{ .RelPermalink }}" class="gallery-card">
-                <div class="gallery-image">
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                </div>
-                <div class="gallery-info">
-                    <h3>{{ .Title }}</h3>
-                </div>
-            </a>
+{{ range .Site.RegularPages.ByDate.Reverse }}
 
-            {{ end }}
+    {{ $show := false }}
 
-        </div>
+    <!-- HALAMAN SEMUA -->
+    {{ if eq $current "/galeri/" }}
+        {{ $show = true }}
+    {{ else }}
+        <!-- HALAMAN KATEGORI -->
+        {{ if in .Params.kategori (replace $current "/galeri/kategori/" "" | replace "/" "") }}
+            {{ $show = true }}
+        {{ end }}
+    {{ end }}
 
-    </div>
-</section>
+    {{ if $show }}
+
+        <a href="{{ .RelPermalink }}" class="gallery-card">
+            <div class="gallery-image">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}">
+            </div>
+            <div class="gallery-info">
+                <h3>{{ .Title }}</h3>
+            </div>
+        </a>
+
+    {{ end }}
 
 {{ end }}
+
+</div>

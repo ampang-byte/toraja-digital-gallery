@@ -7,7 +7,14 @@
 
         <div class="gallery-grid">
 
-            {{ range .Pages }}
+            {{ $pages := .Pages }}
+
+            {{ if .Params.kategori }}
+            {{ $pages = where .Pages "Params.kategori" "intersect" (slice .Params.kategori) }}
+            {{ end }}
+
+            {{ range $pages.ByDate.Reverse }}
+
 
             <a href="{{ .RelPermalink }}" class="gallery-card">
 

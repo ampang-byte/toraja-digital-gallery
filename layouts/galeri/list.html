@@ -3,9 +3,8 @@
 <section class="section">
     <div class="container">
 
-        <h1>Galeri</h1>
+<h1>Galeri</h1>
 
-<!-- 🔥 FILTER AUTO -->
 <div class="gallery-filter">
 
     <!-- SEMUA -->
@@ -14,30 +13,13 @@
        Semua
     </a>
 
-    {{ range $name, $taxonomy := sort .Site.Taxonomies.kategori }}
-
-        {{ $label := "" }}
-
-        {{ if eq $name "ritual-pemakaman" }}
-            {{ $label = "Ritual Pemakaman" }}
-        {{ else if eq $name "ritual-syukuran" }}
-            {{ $label = "Ritual Syukuran" }}
-        {{ else if eq $name "arsitektur-seni" }}
-            {{ $label = "Arsitektur & Seni" }}
-        {{ else if eq $name "jejak-sejarah" }}
-            {{ $label = "Jejak Sejarah" }}
-        {{ else if eq $name "lanskap-alam" }}
-            {{ $label = "Lanskap & Alam" }}
-        {{ else if eq $name "sosial-aktivitas" }}
-            {{ $label = "Sosial & Aktivitas" }}
-        {{ else }}
-            {{ $label = $name | humanize }}
-        {{ end }}
+    <!-- 🔥 INI YANG DIUBAH -->
+    {{ range $name, $taxonomy := .Site.Taxonomies.kategori.Alphabetical }}
 
         <a href="/galeri/kategori/{{ $name }}/"
            class="filter-btn {{ if in $.RelPermalink $name }}active{{ end }}">
-           
-           {{ $label }}
+
+            {{ $name | humanize }}
 
         </a>
 

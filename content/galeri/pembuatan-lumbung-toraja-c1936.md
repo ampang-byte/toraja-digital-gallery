@@ -8,6 +8,9 @@ sumber: "Leiden University Libraries"
 tahun: "Circa 1936"
 
 lokasi: "Toraja, Sulawesi Selatan"
+
+kategori:
+- arsitektur-seni
 ---
 
 Pembuatan Lumbung Khas Toraja (Alang).

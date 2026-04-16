@@ -8,6 +8,9 @@ sumber: "Leiden University Libraries"
 tahun: "Circa 1937"
 
 lokasi: "Toraja, Sulawesi Selatan"
+
+kategori:
+- arsitektur-seni
 ---
 
 Rumah Adat Tradisional Toraja (Tongkonan).

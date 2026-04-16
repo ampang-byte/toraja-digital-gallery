@@ -7,17 +7,28 @@
 
 <div class="gallery-filter">
 
+    <!-- SEMUA -->
     <a href="/galeri/" 
        class="filter-btn {{ if eq .RelPermalink "/galeri/" }}active{{ end }}">
        Semua
     </a>
 
-    {{ range $name, $taxonomy := .Site.Taxonomies.kategori }}
+    <!-- URUTAN FIX SESUAI PERMINTAAN -->
+    {{ $kategori := slice
+        (dict "slug" "ritual-pemakaman" "label" "Ritual Pemakaman")
+        (dict "slug" "ritual-syukuran" "label" "Ritual Syukuran")
+        (dict "slug" "arsitektur-seni" "label" "Arsitektur dan Seni")
+        (dict "slug" "jejak-sejarah" "label" "Jejak Sejarah")
+        (dict "slug" "lanskap-alam" "label" "Lanskap dan Alam")
+        (dict "slug" "sosial-aktivitas" "label" "Sosial dan Aktivitas")
+    }}
 
-        <a href="/galeri/kategori/{{ $name }}/"
-           class="filter-btn {{ if in $.RelPermalink $name }}active{{ end }}">
+    {{ range $kategori }}
 
-            {{ $name | humanize }}
+        <a href="/galeri/kategori/{{ .slug }}/"
+           class="filter-btn {{ if in $.RelPermalink .slug }}active{{ end }}">
+
+            {{ .label }}
 
         </a>
 

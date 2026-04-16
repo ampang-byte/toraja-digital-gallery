@@ -7,30 +7,38 @@
 
         <div class="gallery-grid">
 
-               {{ $pages := .Site.RegularPages }}
+               {{ $current := .RelPermalink }}
 
-               {{ if .Params.kategori }}
-               {{ $pages = where $pages "Params.kategori" "intersect" (slice .Params.kategori) }}
-               {{ end }}
+               {{ range .Site.RegularPages.ByDate.Reverse }}
 
-               {{ range $pages.ByDate.Reverse }}
+                  {{ $match := false }}
 
+                  {{ if eq $current "/galeri/" }}
+                     {{ $match = true }}
+                  {{ else }}
+                     {{ if in .Params.kategori (replace $current "/galeri/" "" | replace "/" "") }}
+                        {{ $match = true }}
+                     {{ end }}
+                  {{ end }}
 
-            <a href="{{ .RelPermalink }}" class="gallery-card">
+                  {{ if $match }}
 
-                <!-- GAMBAR -->
-                <div class="gallery-image">
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                </div>
+         <a href="{{ .RelPermalink }}" class="gallery-card">
 
-                <!-- TEKS DI BAWAH -->
-                <div class="gallery-info">
-                    <h3>{{ .Title }}</h3>
-                </div>
+            <div class="gallery-image">
+                 <img src="{{ .Params.image }}" alt="{{ .Title }}">
+            </div>
 
-            </a>
+            <div class="gallery-info">
+                 <h3>{{ .Title }}</h3>
+            </div>
 
-            {{ end }}
+         </a>
+
+    {{ end }}
+
+{{ end }}
+
 
         </div>
 

@@ -34,5 +34,31 @@ window.addEventListener("scroll", function() {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const img = document.querySelector(".lightbox-trigger");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const close = document.querySelector(".lightbox-close");
+
+    if (img) {
+        img.onclick = function() {
+            lightbox.style.display = "block";
+            lightboxImg.src = this.src;
+        }
+    }
+
+    close.onclick = function() {
+        lightbox.style.display = "none";
+    }
+
+    lightbox.onclick = function(e) {
+        if (e.target !== lightboxImg) {
+            lightbox.style.display = "none";
+        }
+    }
+});
+</script>
+
 </body>
 </html>

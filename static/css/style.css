@@ -374,6 +374,14 @@ body {
     font-weight: 600;
 }
 
+.gallery-info div {
+    margin-top: 25px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    max-width: 500px;
+}
+
 /* SHARE */
 .gallery-share {
     margin-top: 40px;

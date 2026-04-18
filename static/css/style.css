@@ -369,6 +369,7 @@ body {
 .gallery-info p {
     display: flex;
     gap: 10px;
+    align-items: flex-start;
     margin: 6px 0;
     font-size: 0.9rem;
     color: #555;

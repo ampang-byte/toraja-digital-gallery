@@ -326,7 +326,7 @@ body {
 .gallery-detail {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
-    gap: 40px;
+    gap: 80px;
     align-items: start;
 }
 

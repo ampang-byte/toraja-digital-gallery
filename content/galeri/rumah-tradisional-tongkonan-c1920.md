@@ -1,5 +1,5 @@
 ---
-title: "Rumah Tradisional Toraja (Tongkonan)"
+title: "Rumah Tradisional Toraja (Tongkonan) c. 1920"
 
 image: "/img/rumah-tradisional-tongkonan-c1920.webp"
 

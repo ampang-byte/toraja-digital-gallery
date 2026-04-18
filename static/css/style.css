@@ -351,6 +351,11 @@ body {
     letter-spacing: -0.5px;
 }
 
+.gallery-info h1:hover {
+    color: var(--kuning);
+    transition: 0.3s;
+}
+
 .gallery-info h3 {
     opacity: 0.85;
     transition: 0.3s;

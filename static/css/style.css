@@ -263,6 +263,23 @@ body {
     justify-content: center;
 }
 
+/* ========================= */
+/* RELATED POSTS (FIX RATIO) */
+/* ========================= */
+
+.related-posts .gallery-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+}
+
+.related-posts .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 🔥 ini kunci biar gak gepeng */
+}
+
 /* CARD */
 .gallery-card {
     display: block;

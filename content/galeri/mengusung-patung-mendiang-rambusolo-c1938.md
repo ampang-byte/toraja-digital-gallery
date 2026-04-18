@@ -1,5 +1,5 @@
 ---
-title: "Potret mengusung patung mendiang (tau-tau) dalam upacara pemakaman (Rambu Solo')"
+title: "Potret mengusung patung mendiang (tau-tau)"
 
 image: "/img/mengusung-patung-mendiang-rambusolo-c1938.webp"
 
@@ -13,4 +13,4 @@ kategori:
 - ritual-pemakaman
 ---
 
-mengusung patung mendiang (tau-tau) dalam upacara pemakaman (Rambu Solo').
+Mengusung patung mendiang (tau-tau) dalam upacara pemakaman (Rambu Solo') aluk rampe matampu'.

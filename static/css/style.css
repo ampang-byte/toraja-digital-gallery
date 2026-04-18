@@ -280,11 +280,6 @@ body {
     object-fit: cover; /* 🔥 ini kunci biar gak gepeng */
 }
 
-.related-posts h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 /* CARD */
 .gallery-card {
     display: block;

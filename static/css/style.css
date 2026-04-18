@@ -566,3 +566,57 @@ body {
 .gallery-detail .gallery-image img:hover {
     transform: scale(1.01);
 }
+
+/* ========================= */
+/* RELATED POSTS */
+/* ========================= */
+
+.related-section {
+    margin-top: 80px;
+    text-align: left;
+}
+
+.related-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.related-card {
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s ease;
+}
+
+.related-image {
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+}
+
+.related-image img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.related-title {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.related-card:hover img {
+    transform: scale(1.05);
+}
+
+.related-card:hover .related-title {
+    color: var(--kuning);
+}

@@ -98,10 +98,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     showItems();
 
-    btn.addEventListener("click", function() {
-        visible += 6;
-        showItems();
-    });
+    if (btn) {
+        btn.addEventListener("click", function() {
+           visible += 6;
+           showItems();
+        });
+    }
 
 });
 </script>

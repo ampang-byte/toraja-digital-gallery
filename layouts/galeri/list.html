@@ -23,12 +23,10 @@
             }}
 
             {{ range $kategori }}
-
                 <a href="/galeri/kategori/{{ .slug }}/"
                    class="filter-btn {{ if in $.RelPermalink .slug }}active{{ end }}">
                     {{ .label }}
                 </a>
-
             {{ end }}
 
         </div>
@@ -36,7 +34,7 @@
         <!-- GRID -->
         {{ $current := .RelPermalink }}
 
-        <div class="gallery-grid">
+        <div class="gallery-grid" id="gallery-list">
 
         {{ range .Site.RegularPages.ByDate.Reverse }}
 
@@ -52,7 +50,7 @@
 
             {{ if $show }}
 
-                <a href="{{ .RelPermalink }}" class="gallery-card">
+                <a href="{{ .RelPermalink }}" class="gallery-card load-item">
                     <div class="gallery-image">
                         <img src="{{ .Params.image }}" alt="{{ .Title }}">
                     </div>
@@ -67,7 +65,45 @@
 
         </div>
 
+        <!-- 🔥 LOAD MORE BUTTON -->
+        <div style="text-align:center; margin-top:40px;">
+            <button id="loadMoreBtn" class="load-more-btn">Muat Lebih Banyak</button>
+        </div>
+
     </div>
 </section>
+
+<!-- 🔥 SCRIPT LOAD MORE -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const items = document.querySelectorAll(".load-item");
+    const btn = document.getElementById("loadMoreBtn");
+
+    let visible = 6; // jumlah awal tampil
+
+    function showItems() {
+        items.forEach((item, index) => {
+            if (index < visible) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+
+        if (visible >= items.length) {
+            btn.style.display = "none";
+        }
+    }
+
+    showItems();
+
+    btn.addEventListener("click", function() {
+        visible += 6;
+        showItems();
+    });
+
+});
+</script>
 
 {{ end }}

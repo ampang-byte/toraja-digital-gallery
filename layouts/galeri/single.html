@@ -69,39 +69,26 @@
         </div>
 
 <!-- 🔥 RELATED POSTS -->
-<div class="related-section">
-
+<div class="related-posts">
     <h2>Galeri Terkait</h2>
 
-    <div class="related-grid">
+    <div class="gallery-grid">
 
-        {{ $current := . }}
-        {{ $kategori := index .Params.kategori 0 }}
+        {{ range first 6 (where .Site.RegularPages "Params.kategori" "intersect" .Params.kategori) }}
 
-        {{ range first 6 (where site.RegularPages "Params.kategori" "intersect" (slice $kategori)) }}
-
-            {{ if ne .Permalink $current.Permalink }}
-
-                <a href="{{ .RelPermalink }}" class="related-card">
-
-                    <div class="related-image">
-                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                    </div>
-
-                    <div class="related-title">
-                        {{ .Title }}
-                    </div>
-
-                </a>
-
-            {{ end }}
+        <a href="{{ .RelPermalink }}" class="gallery-card">
+            <div class="gallery-image">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}">
+            </div>
+            <div class="gallery-info">
+                <h3>{{ .Title }}</h3>
+            </div>
+        </a>
 
         {{ end }}
 
     </div>
-
 </div>
-
 
     </div>
 </section>

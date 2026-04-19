@@ -52,7 +52,13 @@
 
                 <a href="{{ .RelPermalink }}" class="gallery-card load-item">
                     <div class="gallery-image">
-                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                        <img 
+                            src="{{ .Params.image }}" 
+                            alt="{{ .Title }} - Galeri budaya Toraja"
+                            title="{{ .Title }}"
+                            loading="lazy"
+                        >
+
                     </div>
                     <div class="gallery-info">
                         <h3>{{ .Title }}</h3>

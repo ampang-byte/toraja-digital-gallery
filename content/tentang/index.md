@@ -1,5 +1,6 @@
 ---
 title: "Tentang"
+type: "page"
 ---
 
 Toraja Digital Gallery hadir sebagai upaya untuk mengabadikan warisan luhur Tana Toraja ke dalam bentuk digital. Di tengah arus zaman yang terus bergerak, dokumentasi yang tepat adalah kunci agar denyut kebudayaan leluhur tetap terjaga dan dapat diwariskan melampaui batas waktu.

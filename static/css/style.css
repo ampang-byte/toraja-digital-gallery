@@ -474,6 +474,16 @@ body {
     color: var(--putih);
 }
 
+.footer a {
+    color: var(--kuning);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
 /* SEMBUNYIKAN DI DESKTOP */
 #menu-toggle {
     display: none;

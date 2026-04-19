@@ -15,3 +15,7 @@ title = "Test Hugo"
 
 [permalinks]
   kategori = "/galeri/kategori/:slug/"
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5

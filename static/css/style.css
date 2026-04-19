@@ -679,3 +679,43 @@ body {
 .related-card:hover .related-title {
     color: var(--kuning);
 }
+
+/* ========================= */
+/* PAGE CONTENT (ABOUT, PRIVACY) */
+/* ========================= */
+
+.page-content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: left;
+
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #444;
+}
+
+.page-content p {
+    margin-bottom: 18px;
+}
+
+.page-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.page-content h2 {
+    font-size: 1.3rem;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.page-content a {
+    color: var(--kuning);
+    text-decoration: none;
+}
+
+.page-content a:hover {
+    text-decoration: underline;
+}

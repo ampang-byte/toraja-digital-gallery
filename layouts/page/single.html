@@ -1,19 +1,11 @@
 {{ define "main" }}
 
 <section class="section">
-    <div class="container" style="max-width:800px;">
+    <div class="container page-content">
 
-        <h1 style="margin-bottom:25px;">
-            {{ .Title }}
-        </h1>
+        <h1>{{ .Title }}</h1>
 
-        <div style="
-            font-size: 1rem;
-            line-height: 1.9;
-            color: #444;
-        ">
-            {{ .Content }}
-        </div>
+        {{ .Content }}
 
     </div>
 </section>

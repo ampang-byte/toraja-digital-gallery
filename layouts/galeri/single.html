@@ -10,7 +10,14 @@
 
             <!-- GAMBAR -->
             <div class="gallery-image">
-                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="lightbox-trigger">
+                <img 
+                    src="{{ .Params.image }}" 
+                    alt="{{ .Title }} - Dokumentasi budaya Toraja"
+                    title="{{ .Title }}"
+                    loading="lazy"
+                    class="lightbox-trigger"
+                >
+
             </div>
 
             <!-- INFO -->

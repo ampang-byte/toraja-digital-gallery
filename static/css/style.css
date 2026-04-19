@@ -695,7 +695,7 @@ body {
 }
 
 .page-content p {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .page-content h1 {
@@ -722,10 +722,14 @@ body {
 
 .page-content h3 {
     font-size: 1.1rem;
-    margin-top: 15px;
-    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 3px; /* 🔥 diperkecil */
     font-weight: 600;
     color: #000;
+}
+
+.page-content h3 + p {
+    margin-top: 0; /* 🔥 hapus jarak tambahan dari paragraf */
 }
 
 .page-content a {

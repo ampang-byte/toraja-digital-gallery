@@ -11,6 +11,8 @@ lokasi: "Toraja, Sulawesi Selatan"
 
 kategori:
 - arsitektur-seni
+
+type: "galeri"
 ---
 
 Rumah Adat Tradisional Toraja (Tongkonan).

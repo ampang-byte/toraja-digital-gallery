@@ -48,7 +48,7 @@
                 {{ end }}
             {{ end }}
 
-            {{ if and $show .Params.image }}
+            {{ if and $show (eq .Type "galeri") }}
 
                 <a href="{{ .RelPermalink }}" class="gallery-card load-item">
                     <div class="gallery-image">

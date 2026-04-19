@@ -11,6 +11,8 @@ lokasi: "Toraja, Sulawesi Selatan"
 
 kategori:
 - ritual-pemakaman
+
+type: "galeri"
 ---
 
 Mengusung patung mendiang (tau-tau) dalam upacara pemakaman (Rambu Solo') aluk rampe matampu'.

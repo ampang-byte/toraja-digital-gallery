@@ -12,6 +12,8 @@ lokasi: "Kalambe', Tikala, Toraja, Sulawesi Selatan"
 kategori:
 - jejak-sejarah
 - lanskap-alam
+
+type: "galeri"
 ---
 
 Gereja di Kalambe', Tikala, Toraja, Sulawesi Selatan

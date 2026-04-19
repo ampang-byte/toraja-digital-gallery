@@ -11,6 +11,8 @@ lokasi: "Toraja, Sulawesi Selatan"
 
 kategori:
 - arsitektur-seni
+
+type: "galeri"
 ---
 
 Pembuatan Lumbung Khas Toraja (Alang).

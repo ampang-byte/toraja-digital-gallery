@@ -12,6 +12,8 @@ lokasi: "Makale, Toraja, Sulawesi Selatan"
 kategori:
 - sosial-aktivitas
 - jejak-sejarah
+
+type: "galeri"
 ---
 
 Pasar di Makale, Toraja, Sulawesi Selatan

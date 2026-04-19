@@ -12,6 +12,8 @@ lokasi: "Toraja, Sulawesi Selatan"
 kategori:
 - ritual-syukuran
 - arsitektur-seni
+
+type: "galeri"
 ---
 
 Tarian Manganda'

@@ -2,6 +2,8 @@
 
 title: "Tentang"
 
+type: "page"
+
 \---
 
 

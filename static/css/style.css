@@ -705,15 +705,6 @@ body {
     letter-spacing: -0.5px;
 }
 
-.page-content h1::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 2px;
-    background: var(--kuning);
-    margin-top: 10px;
-}
-
 .page-content h2 {
     font-size: 1.3rem;
     margin-top: 35px;

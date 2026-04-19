@@ -695,7 +695,7 @@ body {
 }
 
 .page-content p {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .page-content h1 {
@@ -709,6 +709,14 @@ body {
     font-size: 1.3rem;
     margin-top: 35px;
     margin-bottom: 15px;
+}
+
+.page-content h3 {
+    font-size: 1.1rem;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #000;
 }
 
 .page-content a {
